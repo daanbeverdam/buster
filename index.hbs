@@ -1,0 +1,28 @@
+{{!< default}}
+{{> header}}
+<main class="buster_main" role="main">
+    <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
+        {{#foreach posts}}
+        <header class="buster_post_header">
+            <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+            <h2 class="buster_post_title" itemprop="headline">
+                <a href="{{{url}}}" rel="bookmark">{{title}}</a>
+            </h2>
+        </header>
+        <div class="buster_post_content" itemprop="articleBody">
+            {{content words=50}}
+        </div>
+        {{#if tags}}
+        <div class="buster_post_tags">
+            Tags: {{tags separator=" | "}}
+        </div>
+        {{/if}}
+    </article>
+    {{#if pagination}}
+    <div class="buster_pagination">
+        {{{pagination}}}
+    </div>
+    {{/if}}
+    {{/foreach}}
+    {{> footer}}
+</main>
