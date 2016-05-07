@@ -1,6 +1,9 @@
 <div role='banner' class="buster_header">
+    {{#if @blog.cover}}
+        <div class="buster_blog_cover" href="{{@blog.url}}"><img src="{{@blog.cover}}" alt="{{@blog.title}}" /></div>
+    {{/if}}
     {{#if @blog.logo}}
-        <a class="buster_blog_logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <div class="buster_blog_logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></div>
     {{/if}}
     <h1 class="buster_blog_title">
         <a title="{{@blog.title}}" href='{{@blog.url}}'>
