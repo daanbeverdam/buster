@@ -8,6 +8,8 @@
                 <header class="buster_post_header">
                     {{#if image}}
                         <div class="buster_post_image"><img src="{{image}}" alt="{{title}}"></img></div>
+                    {{else}}
+                        <div class="buster_post_image"><img src="{{asset "images/filler.png"}}"></img></div>
                     {{/if}}
                     <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
                     <h2 class="buster_post_title" itemprop="headline">
