@@ -5,8 +5,9 @@ html {
 }
 
 body {
-    font-family: sans-serif;
-    font-weight: 300;
+    font-family: 'Slabo 27px', serif;
+    font-weight: 400;
+    color: #505050;
     margin: 0;
     position: absolute;
     top: 0;
@@ -23,8 +24,8 @@ h1 {
 
 h2 {
     font-size: 1.3em;
+    letter-spacing: 0.5px;
     margin: 0.625em 0;
-    color: black;
 }
 
 h3 {
@@ -48,7 +49,7 @@ h6 {
 }
 
 a {
-    background: transparent;ent;
+    background: transparent;
 }
 
 a:link {
@@ -63,13 +64,14 @@ a:hover,a:visited:hover {
 
 a:visited {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 .buster_wrapper {
+    float: left;
     width: 100%;
     height: 100%;
-    max-width: 90em;
+    max-width: 80em;
     margin: auto;
 }
 
@@ -126,42 +128,54 @@ a:visited {
 }
 
 .buster_main {
+    display: block;
     /* float: left; */
     margin: auto;
     height: 100%;
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
-    max-width: 60em;
-    padding-left: 1.6em;
-    padding-right: 1.6em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* max-width: 61.7em; */
+    /* padding-left: 1.6em; */
+    /* padding-right: 1.6em; */
     /* border-right: 1px solid lightgray; */
 }
 
 .buster_article_list {
-    /* display: inline; */
-    /* list-style-type: none; */
+    max-width: 60em;
+    height: 100%;
+    margin: auto;
 }
 
-ul li {
-    /* make list elements fall inline as block elements */
-
-    /* next two lines only for display purposes */
-
+ul {
+    text-align:center;
 }
-/* horizontally center ul element */
-ul { text-align:center; }
 
 .buster_article {
     padding: 1em;
     position: relative;
     display: inline-block;
-    min-width: 18em;
-    max-width: 18em;
-    min-height: 15em;
+    max-width: 20em;
     max-height: 15em;
     float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
     /*border-bottom: 1px solid lightgray;*/
 }
+
+/*@media all and (max-width: 1200px) {
+    .buster_article {
+        padding: 1em;
+        position: relative;
+        display: inline-block;
+        max-width: 23em;
+        min-height: 15em;
+        max-height: 15em;
+        float: left;
+        /*border-bottom: 1px solid lightgray;*/
+    }
+}*/
 
 .buster_article:after {
     content: "";
@@ -178,29 +192,42 @@ i.fa.fa-tag {
 }
 
 .buster_sidebar {
-    display: none;
+    /* display: none; */
     float: left;
-    max-width: 30%;
-    /*margin: 1em;*/
-    min-height: 100%;
+    width: 15em;
+    /* margin: 1em; */
+    height: 100%;
     text-align: center;
-    border-left: 1px solid lightgray;
     border-right: 1px solid lightgray;
     background-color: #f3f3f3;
 }
 
-.buster_post_tags {
-    /* margin-top: 0em; */
-    position: absolute;
-    bottom: 1em;
+.buster_post_title {
+    height: 2.5em;
+    overflow: hidden;
 }
 
-.buster_navigation {
-    text-align: left;
+.buster_post_tags {
+    /* margin-top: 0em; */
+    position: relative;
+    /* left: 0; */
+    bottom: 1.2em;
+}
+
+.buster_navigation ul {
+    margin-left: -3em;
+    text-align: center;
+    list-style-type: none;
 }
 
 .buster_post_header {
     margin-top: 1em;
+}
+
+.buster_post_date {
+    position: relative;
+    bottom: 0;
+    text-align: right;
 }
 
 a:hover h2{
@@ -219,6 +246,7 @@ a:hover h2{
 }
 
 .buster_footer {
+    text-align: center;
     clear: both;
     /* padding-top: 1em; */
     /* padding-left: 1em; */

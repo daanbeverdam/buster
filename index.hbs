@@ -1,6 +1,7 @@
 {{!< default}}
 {{> sidebar}}
 <main class="buster_main" role="main">
+    <div class="buster_article_list">
         {{#foreach posts}}
         <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
             <a href="{{url}}">
@@ -10,7 +11,6 @@
                     {{else}}
                         <div class="buster_post_image"><img src="{{asset "images/filler.png"}}"></img></div>
                     {{/if}}
-                    <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
                     <h2 class="buster_post_title" itemprop="headline">
                         {{title}}
                     </h2>
@@ -19,12 +19,18 @@
                     {{content words=50}}
                 </div> --}}
             </a>
+            <div class="buster_post_footer">
+                <div class="buster_post_date">
+                    <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format="YYYY-MM-DD"}}</time>
+                </div>
             {{#if tags}}
                 <div class="buster_post_tags">
                     <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
                 </div>
-                {{/if}}
+            {{/if}}
+            </div>
         </article>
         {{/foreach}}
+    </div>
     {{> footer}}
 </main>
