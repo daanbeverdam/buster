@@ -1,8 +1,9 @@
-<div role="sidebar" class="buster_sidebar">
+<div role="sidebar" id="sidebar" class="buster_sidebar">
+    <a class="buster_hide_sidebar" onclick="toggle_sidebar('sidebar');"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
     {{#if @blog.cover}}
         <div class="buster_blog_cover" href="{{@blog.url}}"><img src="{{@blog.cover}}" alt="{{@blog.title}}" /></div>
     {{else}}
-        <div class="buster_blog_cover" href="{{@blog.url}}"><img src="{{asset "images/city_skyline.png"}}" alt="{{@blog.title}}" /></div>
+        <div class="buster_blog_cover" href="{{@blog.url}}"><img src="{{asset "images/filler.png"}}" alt="{{@blog.title}}" /></div>
     {{/if}}
     {{#if @blog.logo}}
         <div class="buster_blog_logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></div>
@@ -22,4 +23,14 @@
     <div role="navigation" class="buster_navigation">
         {{navigation}}
     </div>
+    <div role="social" class="buster_social">
+        <p>Get in touch:</p>
+        <a class="buster_social_link" href='https://github.com'><i class="fa fa-github" aria-hidden="true"></i></a>
+        <a class="buster_social_link" href='https://linkedin.com'><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        <a class="buster_social_link" href='https://facebook.com'><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+        {{!-- <a class="buster_social_link" href='https://instagram.com'><i class="fa fa-instagram" aria-hidden="true"></i></a> --}}
+        <a class="buster_social_link" href='mailto:somebody@somewhere.com'><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="buster_social_link" href='{{@blog.url}}/rss/'><i class="fa fa-rss" aria-hidden="true"></i></a>
+    </div>
+    {{> footer}}
 </div>

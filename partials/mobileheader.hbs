@@ -1,0 +1,16 @@
+<div role="mobile_header" class="buster_mobile_header">
+    <a class="buster_menu_button" onclick="toggle_sidebar('sidebar');"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    {{#if @blog.logo}}
+        <div class="buster_blog_logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></div>
+    {{else}}
+        <div class="buster_blog_logo" href="{{@blog.url}}"><img src="{{asset "images/profile_picture.jpg"}}" alt="{{@blog.title}}" /></div>
+    {{/if}}
+{{!--     <h1 class="buster_blog_title">
+        <a title="{{@blog.title}}" href='{{@blog.url}}'>
+        {{{@blog.title}}}
+        </a>
+    </h1> --}}
+{{!--     <div role="navigation" class="buster_navigation">
+        {{navigation}}
+    </div> --}}
+</div>

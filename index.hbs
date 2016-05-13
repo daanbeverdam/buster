@@ -1,6 +1,6 @@
 {{!< default}}
 {{> sidebar}}
-<main class="buster_main" role="main">
+{{> mobileheader}}
     <div class="buster_article_list">
         {{#foreach posts}}
         <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
@@ -15,9 +15,6 @@
                         {{title}}
                     </h2>
                 </header>
-                {{!-- <div class="buster_post_content" itemprop="articleBody">
-                    {{content words=50}}
-                </div> --}}
             </a>
             <div class="buster_post_footer">
                 <div class="buster_post_date">
@@ -31,6 +28,9 @@
             </div>
         </article>
         {{/foreach}}
-        {{> footer}}
+        {{#if pagination}}
+        <div class="buster_pagination">
+            {{{pagination}}}
+        </div>
+        {{/if}}
     </div>
-</main>
