@@ -369,6 +369,7 @@ i.fa.fa-tag {
 
     .buster_article_wrapper {
         margin-top: 3em;
+        height: initial;
     }
 
     .buster_article_list {
