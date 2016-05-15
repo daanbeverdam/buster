@@ -205,9 +205,8 @@ a:hover h2{
 .buster_post_tags {
     max-width: 13em;
     max-height: 1.3em;
-    position: relative;
     overflow: hidden;
-    bottom: 1.2em;
+    float: left;
 }
 
 i.fa.fa-tag {
@@ -217,7 +216,7 @@ i.fa.fa-tag {
 .buster_post_date {
     position: relative;
     bottom: 0;
-    text-align: right;
+    float:right;
 }
 
 .buster_pagination {
@@ -260,10 +259,6 @@ i.fa.fa-tag {
     overflow: initial;
 }
 
-.buster_post_content {
-    margin-bottom: 2.5em;
-}
-
 .buster_article_inner_wrapper .buster_post_tags {
     overflow: visible;
 }
@@ -273,8 +268,6 @@ i.fa.fa-tag {
     font-style: normal;
     font-weight: 300;
     font-size: 1.0em;
-    margin-top: -1em;
-    margin-bottom: 1em;
 }
 
 /* Mobile elements */
