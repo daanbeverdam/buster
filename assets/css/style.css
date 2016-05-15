@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     color: #505050;
     margin: 0;
@@ -87,6 +87,7 @@ a:hover h2{
 .buster_sidebar {
     float: left;
     width: 15em;
+    padding: 0em 0.5em;
     height: 100%;
     text-align: center;
     border-right: 1px solid lightgray;
@@ -188,8 +189,9 @@ a:hover h2{
 }
 
 .buster_post_title {
-    height: 2.5em;
+    height: 2.7em;
     font-weight: 500;
+    letter-spacing: 0px;
     overflow: hidden;
 }
 
@@ -226,10 +228,53 @@ i.fa.fa-tag {
 
 /* Post view elements */
 
-.buster_article_view {
+.buster_article_wrapper {
+    overflow: auto;
+    margin: auto;
+    max-width: 45em;
+    height: 100%;
+}
+
+.buster_full_date {
+    float: right;
+    font-style: italic;
+}
+
+.buster_article_inner_wrapper {
     overflow: hidden;
     margin: auto;
-    max-width: 34em;
+    /*max-width: 34em;*/
+    text-align: justify;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    padding: 0em 1em;
+    font-size: 1em;
+    line-height: 1.6em;
+}
+
+.buster_article_inner_wrapper .buster_post_header .buster_post_title {
+    height: auto;
+    font-size: 1.8em;
+    margin-top: 1.4em;
+    font-weight: 700;
+    overflow: initial;
+}
+
+.buster_post_content {
+    margin-bottom: 2.5em;
+}
+
+.buster_article_inner_wrapper .buster_post_tags {
+    overflow: visible;
+}
+
+.buster_author_name {
+    float: right;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.0em;
+    margin-top: -1em;
+    margin-bottom: 1em;
 }
 
 /* Mobile elements */
@@ -327,6 +372,10 @@ i.fa.fa-tag {
         margin-left: 0.5em;
         margin-top: 0.3em;
         font-size: 1.7em;
+    }
+
+    .buster_article_wrapper {
+        margin-top: 3em;
     }
 
     .buster_article_list {
