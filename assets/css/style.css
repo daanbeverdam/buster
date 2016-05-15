@@ -243,7 +243,6 @@ i.fa.fa-tag {
     overflow: hidden;
     margin: auto;
     /*max-width: 34em;*/
-    text-align: justify;
     font-size: 1.2em;
     line-height: 1.6em;
     padding: 0em 1em;
@@ -257,6 +256,10 @@ i.fa.fa-tag {
     margin-top: 1.4em;
     font-weight: 700;
     overflow: initial;
+}
+
+.buster_post_content{
+    text-align: justify;
 }
 
 .buster_article_inner_wrapper .buster_post_tags {
