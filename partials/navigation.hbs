@@ -1,0 +1,7 @@
+<div class="buster_navigation">
+    <ul class="buster_navigation_list">
+        {{#foreach navigation}}
+        <li class="buster_navigation_item {{slug}}{{#if current}} current{{/if}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+</div>

@@ -1,4 +1,3 @@
-<div class="buster_sidebar_wrapper">
 <div class="buster_sidebar">
     <div class="buster_sidebar_image">
     {{#if @blog.cover}}
@@ -24,5 +23,10 @@
             {{@blog.description}}
         </a>
     </p>
-</div>
+    {{#if @blog.navigation}}
+        <div class="buster_navigation">
+            {{navigation}}
+        </div>
+    {{/if}}
+
 </div>
