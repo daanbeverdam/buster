@@ -2,6 +2,7 @@
 {{> header}}
 <main class="buster_main" role="main">
     {{#foreach posts}}
+    <div class="buster_card_wrapper">
     <a href="{{{url}}}" rel="bookmark">
         <article class="buster_card" role="article" itemscope itemtype="http://schema.org/Article">
             <div class="buster_card_image">
@@ -27,11 +28,12 @@
             </div>
         </article>
     </a>
+    </div>
     {{/foreach}}
-    {{#if pagination}}
+{{!--     {{#if pagination}}
     <div class="buster_pagination">
         {{{pagination}}}
     </div>
     {{/if}}
-    {{> footer}}
+    {{> footer}} --}}
 </main>
