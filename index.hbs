@@ -1,28 +1,37 @@
 {{!< default}}
 {{> header}}
 <main class="buster_main" role="main">
-    <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
-        {{#foreach posts}}
-        <header class="buster_post_header">
-            <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-            <h2 class="buster_post_title" itemprop="headline">
-                <a href="{{{url}}}" rel="bookmark">{{title}}</a>
-            </h2>
-        </header>
-        <div class="buster_post_content" itemprop="articleBody">
-            {{content words=50}}
-        </div>
-        {{#if tags}}
-        <div class="buster_post_tags">
-            Tags: {{tags separator=" | "}}
-        </div>
-        {{/if}}
-    </article>
+    {{#foreach posts}}
+    <a href="{{{url}}}" rel="bookmark">
+        <article class="buster_card" role="article" itemscope itemtype="http://schema.org/Article">
+            <div class="buster_card_image">
+                {{#if image}}
+                    <img src="{{image}}" alt="{{title}}"></img>
+                {{else}}
+                    <img src=""></img>
+                {{/if}}
+                <div class="buster_card_title">
+                    <h2 class="buster_post_title" itemprop="headline">{{title}}</h2>
+                </div>
+            </div>
+            <div class="buster_card_content">
+                <div class="buster_post_summary" itemprop="articleBody">
+                    <p>{{excerpt characters="200"}}...</p>
+                </div>
+                {{#if tags}}
+                    <div class="buster_post_tags">
+                        <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
+                    </div>
+                {{/if}}
+                <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+            </div>
+        </article>
+    </a>
+    {{/foreach}}
     {{#if pagination}}
     <div class="buster_pagination">
         {{{pagination}}}
     </div>
     {{/if}}
-    {{/foreach}}
     {{> footer}}
 </main>
