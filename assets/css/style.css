@@ -37,6 +37,9 @@ body {
 .buster_sidebar {
     width: 200px;
     height: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     padding: 15px;
     float: left;
     background: white;
