@@ -1,6 +1,7 @@
 {{!< default}}
 {{> sidebar}}
 <main class="buster_main" role="main">
+    {{!-- {{> header}} --}}
     {{#foreach posts}}
     <div class="buster_card_wrapper">
     <a href="{{{url}}}" rel="bookmark">
@@ -17,7 +18,7 @@
             </div>
             <div class="buster_card_content">
                 <div class="buster_post_summary" itemprop="articleBody">
-                    <p>{{excerpt characters="200"}}...</p>
+                    <p>{{{excerpt characters="100"}}}...</p>
                 </div>
                 {{#if tags}}
                     <div class="buster_post_tags">

@@ -20,7 +20,7 @@ html {
 body {
     height: 100%;
     width: 100%;
-    background-color: #F0F0F0;
+    background-color: #fcfcfc;
     font-family: 'Roboto';
     margin: auto;
 }
@@ -34,43 +34,91 @@ body {
     margin: auto;
 }
 
-.buster_sidebar {
-    width: 200px;
+.buster_sidebar_wrapper {
     height: 100%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 15px;
+    width: 300px;
     float: left;
-    background: white;
-    border-right: solid 1px lightgray;
-    box-shadow: 0px 2.5px 5px -1.5px #888888;
+    box-sizing: border-box;
+    padding: 2em;
+    padding-right: 0em;
+}
 
+.buster_sidebar {
+    height: 100%;
+    background: white;
+    /*border: solid 1px lightgray;*/
+    box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
 }
 
 .buster_sidebar_image {
     width: 100%;
-    height: 0px; /*temporary*/
-    overflow: hidden;
+    height: 150px;
 }
 
 .buster_sidebar_image img {
-    background: #2ba2d4;
+    background: lightgray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, lightgray); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, lightgray); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, lightgray); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, lightgray); /* Standard syntax */
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.buster_navigation_list .current {
-    background: #F0F0F0;
+.buster_sidebar_logo {
+    margin-bottom: -35px;
+    height: 10em;
+}
+
+.buster_sidebar_logo img {
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    position: relative;
+    bottom: 45px;
+    left: 70px;
+    box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
+    /*border: 2px solid #FFF;*/
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    background-color: lightgray;
+}
+
+.buster_sidebar_text {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+h1.buster_blog_title a {
+/*    color: white;*/
+}
+
+.buster_navigation_item.current {
+    background-color: lightgray;
+}
+
+.buster_navigation_item {
+    padding: 15px;
 }
 
 .buster_main {
     max-width: 70em;
     margin: auto;
     height: 100%;
+    padding: 1em;
     overflow-x: hidden;
     overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.buster_header {
+    height: 100px;
+    color: white;
+    background: #lightgray;
 }
 
 /* Index view */
@@ -87,18 +135,11 @@ body {
 .buster_card {
     float: left;
     background: white;
-    box-shadow: 0px 2.5px 5px 0px #888888;
+    box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
     -webkit-transition: transform 0.2s ease-in-out;
     transition: transform 0.2s ease-in-out;
     -moz-transition: transform 0.2s ease-in-out;
     -o-transition: transform 0.2s ease-in-out;
-}
-
-.buster_card:hover {
-    -webkit-transform:scale(1.05);
-    -moz-transform:scale(1.05);
-    -o-transform:scale(1.05);
-    transform:scale(1.05);
 }
 
 .buster_card_image {
@@ -108,7 +149,11 @@ body {
 }
 
 .buster_card_image img {
-    background: #2ba2d4;
+    background: lightgray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white, lightgray); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, lightgray); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, lightgray); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, lightgray); /* Standard syntax */
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -145,7 +190,7 @@ body {
 }
 
 .buster_post_tags a {
-    color: #2ba2d4;
+    color: black;
     font-weight: 400;
 
 }
@@ -158,9 +203,24 @@ body {
     }
 }
 
+@media screen and (min-width: 1000px) {
+    .buster_card:hover {
+        -webkit-transform:scale(1.05);
+        -moz-transform:scale(1.05);
+        -o-transform:scale(1.05);
+        transform:scale(1.05);
+    }
+}
+
 @media screen and (max-width: 1000px) {
-    .buster_sidebar {
+    .buster_sidebar_wrapper {
         display: none;
+    }
+    .buster_card:active {
+        -webkit-transform:scale(1.05);
+        -moz-transform:scale(1.05);
+        -o-transform:scale(1.05);
+        transform:scale(1.05);
     }
 }
 
