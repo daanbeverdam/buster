@@ -3,9 +3,9 @@
 <main class="buster_main" role="main">
     {{!-- {{> header}} --}}
     {{#foreach posts}}
-    <div class="buster_card_wrapper">
+    <div class="buster_card_wrapper buster_card_index">
     <a href="{{{url}}}" rel="bookmark">
-        <article class="buster_card" role="article" itemscope itemtype="http://schema.org/Article">
+        <article class="buster_card buster_scale" role="article" itemscope itemtype="http://schema.org/Article">
             <div class="buster_card_image">
                 {{#if image}}
                     <img src="{{image}}" alt="{{title}}"></img>
@@ -35,6 +35,5 @@
     <div class="buster_pagination">
         {{{pagination}}}
     </div>
-    {{/if}}
-    {{> footer}} --}}
+    {{/if}} --}}
 </main>
