@@ -169,6 +169,26 @@ div {
     background-color: #D6F3F0;
 }
 
+.buster_social {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.buster_social_link {
+    font-size: 30px;
+    margin: 2px;
+    color: #4DB6AC;
+}
+
+.buster_footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
 .buster_main {
     /*max-width: 70em;*/
     margin: auto;
