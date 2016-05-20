@@ -2,11 +2,13 @@ function toggle_menu () {
     menu = document.getElementById('sidebar');
     if (menu.style.display == 'none' || menu.style.display === '') {
         menu.style.display = 'block';
-        menu.style.zIndex = 2;
         menu.style.padding = 0;
         menu.style.position = 'fixed';
     } else {
-        menu.style.display = 'none';
+        menu.style.display = null;
+        menu.style.position = null;
+        menu.style.padding = null;
+        menu.style.paddingRight = null;
     }
 }
 

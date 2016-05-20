@@ -16,7 +16,7 @@ img {
 }
 
 a {
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 
@@ -27,6 +27,14 @@ ul {
 
 ul li {
     list-style-type: none;
+}
+
+h1 {
+    color: inherit;
+}
+
+div {
+    color: inherit;
 }
 
 /* Main elements */
@@ -104,11 +112,17 @@ h1.buster_blog_title a {
 }
 
 .buster_navigation_item.current {
-    background-color: lightgray;
+    color: white;
+    background-color: #4DB6AC;
+    box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
+    -webkit-transform:scale(1.025);
+    -moz-transform:scale(1.025);
+    -o-transform:scale(1.025);
+    transform:scale(1.025);
 }
 
 .buster_navigation_item.current:hover {
-    background-color: lightgray;
+    background-color: #4DB6AC;
 }
 
 .buster_navigation_item {
@@ -116,7 +130,7 @@ h1.buster_blog_title a {
 }
 
 .buster_navigation_item:hover {
-    background-color: #f1f1f1;
+    background-color: #D6F3F0;
 }
 
 .buster_main {
@@ -143,7 +157,7 @@ h1.buster_blog_title a {
     height: 50px;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
     z-index: 1;
-    background-color: white;
+    background-color: #4DB6AC;
     display: table;
 }
 
@@ -152,6 +166,10 @@ h1.buster_blog_title a {
     vertical-align: middle;
     padding-left: 0.5em;
     font-size: 32px;
+}
+
+.buster_mobile_menu {
+    color: white;
 }
 
 .buster_close_menu {
@@ -188,6 +206,7 @@ h1.buster_blog_title a {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    position: relative;
 }
 
 .buster_card_image img {
@@ -195,7 +214,7 @@ h1.buster_blog_title a {
     background: -webkit-linear-gradient(white, lightgray); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(white, lightgray); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(white, lightgray); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(white, lightgray); /* Standard syntax */
+    background: linear-gradient(#a1cca1, #4DB6AC);
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -203,10 +222,8 @@ h1.buster_blog_title a {
 
 .buster_card_title {
     width: 100%;
-    display: table;
-    height: 75px;
-    position: relative;
-    bottom: 79px;
+    position: absolute;
+    bottom: 12px;
 }
 
 .buster_card_title .buster_post_title {
@@ -231,18 +248,21 @@ h1.buster_blog_title a {
     padding-top: 1em;
     max-height: 22px;
     overflow: hidden;
-}
-
-.buster_post_tags a {
-    color: black;
+    color: #4DB6AC;
     font-weight: 400;
-
 }
 
 /* Post view */
 
-.buster_post_view {
+.buster_card_post {
     width: 100%;
+}
+
+.buster_card_content_post {
+    max-width: 28em;
+    margin: auto;
+    padding: 0 1em;
+    margin-bottom: 1em;
 }
 
 /* Media queries */

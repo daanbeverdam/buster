@@ -1,11 +1,10 @@
 {{!< default}}
 {{> sidebar}}
-{{>mobile_header}}
+{{> mobile_header}}
 <main class="buster_main" role="main">
-
     {{#post}}
-    <div class="buster_card_wrapper buster_post_view">
-    <div class="buster_card buster_post_view">
+    <div class="buster_card_wrapper buster_card_post">
+    <div class="buster_card buster_card_post">
         <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
             <div class="buster_card_image">
                 {{#if image}}
@@ -17,7 +16,7 @@
                     <h2 class="buster_post_title" itemprop="headline">{{title}}</h2>
                 </div>
             </div>
-            <div class="buster_card_content" itemprop="articleBody">
+            <div class="buster_card_content buster_card_content_post" itemprop="articleBody">
                 {{content}}
             {{#if tags}}
                 <div class="buster_post_tags">
