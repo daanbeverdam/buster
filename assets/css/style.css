@@ -81,8 +81,7 @@ div {
 }
 
 .buster_sidebar_logo {
-    margin-bottom: -35px;
-    height: 10em;
+    padding-top: 45px;
 }
 
 .buster_sidebar_logo img {
@@ -90,9 +89,6 @@ div {
     width: 75px;
     height: 75px;
     margin: auto;
-    position: relative;
-    bottom: 45px;
-    left: 70px;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
     /*border: 2px solid #FFF;*/
     -webkit-border-radius: 50px;
@@ -105,10 +101,6 @@ div {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 15px;
-}
-
-h1.buster_blog_title a {
-/*    color: white;*/
 }
 
 .buster_navigation_item.current {
@@ -228,7 +220,7 @@ h1.buster_blog_title a {
 
 .buster_card_title .buster_post_title {
     color: white;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 25px;
     text-shadow: 0.5px 0.5px 2.5px #000000;
     vertical-align: middle;
@@ -274,10 +266,10 @@ h1.buster_blog_title a {
 
 @media screen and (min-width: 1000px) {
     .buster_scale:hover {
-        -webkit-transform:scale(1.05);
-        -moz-transform:scale(1.05);
-        -o-transform:scale(1.05);
-        transform:scale(1.05);
+        -webkit-transform:scale(1.025);
+        -moz-transform:scale(1.025);
+        -o-transform:scale(1.025);
+        transform:scale(1.025);
     }
 
     .buster_mobile_header {
