@@ -134,7 +134,7 @@ h1.buster_blog_title a {
 }
 
 .buster_main {
-    max-width: 70em;
+    /*max-width: 70em;*/
     margin: auto;
     height: 100%;
     padding: 1em;
@@ -260,7 +260,6 @@ h1.buster_blog_title a {
 
 .buster_card_content_post {
     max-width: 28em;
-    margin: auto;
     padding: 0 1em;
     margin-bottom: 1em;
 }
@@ -297,6 +296,7 @@ h1.buster_blog_title a {
 
     .buster_main {
         padding: 50px 0 0;
+        height: initial;
     }
 
     .buster_scale:active {
