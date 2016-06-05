@@ -6,7 +6,7 @@ html {
 body {
     height: 100%;
     width: 100%;
-    background-color: #fcfcfc;
+    background-color: #f5f5f5;
     font-family: 'Roboto';
     margin: auto;
 }
@@ -20,13 +20,16 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+a:hover {
+    color: #0090d2
 }
 
-ul li {
+ul,li {
     list-style-type: none;
+    margin: inherit;
+    padding: inherit;
+    color: inherit;
+    background-color: inherit;
 }
 
 h1 {
@@ -34,18 +37,86 @@ h1 {
 }
 
 div {
-    color: inherit;
+    color: #696969;
 }
 
 /* Main elements */
 
-.buster_wrapper{
+.buster_wrapper {
     width: 100%;
     height: 100%;
-    max-width: 1500px;
-    /*max-height: 900px;*/
-    margin: auto;
 }
+
+.buster_header {
+    z-index: 1;
+    height: 55px;
+    width: 100%;
+    position: fixed;
+    background: white;
+    box-shadow: 0px 2.5px 10px 0px rgba(185, 185, 185, 0.6);
+    overflow: hidden;
+}
+
+.buster_header_logo_container {
+    float: left;
+    height: 35px;
+    width: 35px;
+    line-height: 55px;
+    margin-left: 30px;
+}
+
+.buster_header_logo {
+    /*box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);*/
+    /*border: 2px solid #FFF;*/
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.buster_navigation_wrapper {
+    max-width: 500px;
+    margin: auto;
+    line-height: 55px;
+    height: 100%;
+}
+
+.buster_navigation {
+    text-align: justify;
+    min-width: 500px;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.buster_navigation:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.buster_current_navigation_item {
+    border-bottom: solid 4px #0090d2;
+    color: #0090d2;
+    /*box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);*/
+    /*-webkit-transform:scale(1.025);
+    -moz-transform:scale(1.025);
+    -o-transform:scale(1.025);
+    transform:scale(1.025);*/
+}
+
+.buster_navigation_item:hover {
+    border-bottom: solid 4px #0090d2;
+    color: #0090d2;
+}
+
+.buster_navigation_item {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    padding: 0 1.3em;
+}​
 
 .buster_sidebar_wrapper {
     height: 100%;
@@ -61,7 +132,7 @@ div {
     position: relative;
     height: 100%;
     background: white;
-    /*border: solid 1px lightgray;*/
+    border: solid 1px lightgray;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
 }
 
@@ -82,10 +153,10 @@ div {
 
 .buster_sidebar_image img {
     background: lightgray; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#a1cca1, #4DB6AC); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#a1cca1, #4DB6AC); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#a1cca1, #4DB6AC); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#a1cca1, #4DB6AC); /* Standard syntax */
+    background: -webkit-linear-gradient(#dedede, #0090d2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#dedede, #0090d2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#dedede, #0090d2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#dedede, #0090d2); /* Standard syntax */
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -93,10 +164,10 @@ div {
 
 .buster_sidebar_image svg {
     background: lightgray; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#a1cca1, #4DB6AC); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#a1cca1, #4DB6AC); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#a1cca1, #4DB6AC); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#a1cca1, #4DB6AC); /* Standard syntax */
+    background: -webkit-linear-gradient(#dedede, #0090d2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#dedede, #0090d2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#dedede, #0090d2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#dedede, #0090d2); /* Standard syntax */
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -148,9 +219,9 @@ div {
     text-align: center;
 }
 
-.buster_navigation_item.current {
+/*.buster_navigation_item.current {
     color: white;
-    background-color: #4DB6AC;
+    background-color: #0090d2;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
     -webkit-transform:scale(1.025);
     -moz-transform:scale(1.025);
@@ -159,7 +230,7 @@ div {
 }
 
 .buster_navigation_item.current:hover {
-    background-color: #4DB6AC;
+    background-color: #0090d2;
 }
 
 .buster_navigation_item {
@@ -168,7 +239,7 @@ div {
 
 .buster_navigation_item:hover {
     background-color: #D6F3F0;
-}
+}*/
 
 .buster_social {
     text-align: center;
@@ -178,7 +249,7 @@ div {
 .buster_social_link {
     font-size: 30px;
     margin: 2px;
-    color: #4DB6AC;
+    color: #0090d2;
 }
 
 .buster_footer {
@@ -195,15 +266,11 @@ div {
     margin: auto;
     height: 100%;
     padding: 1em;
+    max-width: 1500px;
     overflow-x: hidden;
     overflow-y: auto;
     box-sizing: border-box;
-}
-
-.buster_header {
-    height: 100px;
-    color: white;
-    background: #lightgray;
+    padding-top: 70px;
 }
 
 /* Mobile */
@@ -214,7 +281,7 @@ div {
     height: 50px;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
     z-index: 1;
-    background-color: #4DB6AC;
+    background-color: #0090d2;
     display: table;
 }
 
@@ -261,6 +328,18 @@ div {
     -o-transition: transform 0.2s ease-in-out;
 }
 
+.buster_card_image_filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(
+                    rgba(0, 0, 0, 0.01),
+                    rgba(0, 0, 0, 0.25)
+                );
+}
+
 .buster_card_image {
     width: 100%;
     height: 200px;
@@ -269,22 +348,14 @@ div {
 }
 
 .buster_card_image img {
-    background: lightgray; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(white, lightgray); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(white, lightgray); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(white, lightgray); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#a1cca1, #4DB6AC);
+    /*background: #0090d2;*/
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 .buster_card_image svg {
-    background: lightgray; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(white, lightgray); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(white, lightgray); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(white, lightgray); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#a1cca1, #4DB6AC);
+    /*background: #0090d2;*/
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -313,32 +384,49 @@ div {
     font-weight: 100;
 }
 
+.buster_post_excerpt {
+    max-height: 4.1em;
+    overflow: hidden;
+}
+
 .buster_post_tags {
     border-top: 1px solid lightgray;
     padding-top: 1em;
     max-height: 22px;
     overflow: hidden;
-    color: #4DB6AC;
+    /*color: #0090d2;*/
     font-weight: 400;
+}
+
+.buster_no_hover_style:hover {
+    color: inherit;
 }
 
 /* Post view */
 
 .buster_card_post {
-    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    float: none;
 }
 
 .buster_card_content_post {
     max-width: 28em;
     padding: 0 1em;
-    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
 
 /* Media queries */
 
+@media screen and (min-width: 1250px) {
+    .buster_card_index {
+        width: 25%;
+    }
+}
+
 @media screen and (max-width: 1250px) {
     .buster_card_index {
-        width: 50%;
+        width: 33.33%;
     }
 }
 
@@ -359,14 +447,22 @@ div {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 830px) {
     .buster_sidebar_wrapper {
         display: none;
     }
 
-    .buster_main {
+/*    .buster_main {
         padding: 50px 0 0;
         height: initial;
+    }*/
+
+    .buster_card_index {
+        width: 50%;
+    }
+
+    .buster_navigation_wrapper {
+        display: none;
     }
 
     .buster_scale:active {

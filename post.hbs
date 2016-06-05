@@ -1,6 +1,6 @@
 {{!< default}}
-{{> sidebar}}
-{{> mobile_header}}
+{{!-- {{> sidebar}} --}}
+{{> header}}
 <main class="buster_main" role="main">
     {{#post}}
     <div class="buster_card_wrapper buster_card_post">
@@ -10,8 +10,9 @@
                 {{#if image}}
                     <img src="{{image}}" alt="{{title}}"></img>
                 {{else}}
-                    <img src=""></img>
+                    <svg alt="{{title}}"/ >
                 {{/if}}
+                <div class="buster_card_image_filter"></div>
                 <div class="buster_card_title">
                     <h2 class="buster_post_title" itemprop="headline">{{title}}</h2>
                 </div>

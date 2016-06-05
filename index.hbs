@@ -1,6 +1,6 @@
 {{!< default}}
-{{> sidebar}}
-{{>mobile_header}}
+{{!-- {{> sidebar}} --}}
+{{> header}}
 <main class="buster_main" role="main">
     {{#foreach posts}}
     <div class="buster_card_wrapper buster_card_index">
@@ -12,17 +12,18 @@
                 {{else}}
                     <svg alt="{{title}}"/ >
                 {{/if}}
+                <div class="buster_card_image_filter"></div>
                 <div class="buster_card_title">
                     <h2 class="buster_post_title" itemprop="headline">{{title}}</h2>
                 </div>
             </div>
             <div class="buster_card_content">
                 <div class="buster_post_summary" itemprop="articleBody">
-                    <p>{{{excerpt characters="100"}}}...</p>
+                    <p class="buster_post_excerpt">{{{excerpt characters="100"}}}...</p>
                 </div>
                 {{#if tags}}
                     <div class="buster_post_tags">
-                        <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
+                        <i class="fa fa-tag buster_no_hover_style" aria-hidden="true"></i> {{tags separator=", "}}
                     </div>
                 {{/if}}
                 <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
