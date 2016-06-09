@@ -4,8 +4,6 @@ html {
 }
 
 body {
-    height: 100%;
-    width: 100%;
     background-color: #f5f5f5;
     font-family: 'Roboto';
     margin: auto;
@@ -34,6 +32,11 @@ ul,li {
 
 h1 {
     color: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: inherit;
+    padding: inherit;
 }
 
 div {
@@ -58,11 +61,11 @@ div {
 }
 
 .buster_header_logo_container {
-    float: left;
+    float: right;
     height: 35px;
     width: 35px;
     line-height: 55px;
-    margin-left: 32px;
+    margin-right: 20px;
 }
 
 .buster_header_logo {
@@ -137,12 +140,12 @@ div {
 }
 
 .buster_blog_title {
-    position: absolute;
-    bottom: -10px;
-    left: 15px;
+    float: left;
+    line-height: 55px;
+    margin-left: 20px;
+    font-weight: 500;
     max-width: 150px;
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
 }
 
 .buster_sidebar_image {
@@ -262,15 +265,16 @@ div {
 }
 
 .buster_main {
-    /*max-width: 70em;*/
     margin: auto;
     height: 100%;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     max-width: 1500px;
     overflow-x: hidden;
     overflow-y: auto;
     box-sizing: border-box;
-    padding-top: 65px;
+    padding-top: 60px;
+    padding-bottom: 5px;
 }
 
 /* Mobile */
@@ -421,16 +425,49 @@ div {
 
 /* Post view */
 
+.buster_post_view {
+    max-width: 900px;
+    box-sizing: content-box;
+}
+
 .buster_card_post {
-    max-width: 700px;
+    float: left;
+    width: 100%;
     margin: auto;
-    float: none;
+}
+
+.buster_card_post_wrapper {
+    float: left;
+    width: 600px;
 }
 
 .buster_card_content_post {
-    max-width: 28em;
+    text-align: justify;
+    max-width: 30em;
     /*padding: 0 1em;*/
-    padding-bottom: 1em;
+    /*padding-bottom: 1em;*/
+}
+
+.buster_wrapper_more {
+    width: 300px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    float: right;
+}
+
+.buster_card_more {
+    float:left;
+    width: 100%;
+}
+
+.buster_read_more {
+    line-height: 40px;
+    display: block;
+    padding: 0 15px;
+    height: 40px;
+    width: 250px;
 }
 
 /* Media queries */
@@ -464,7 +501,7 @@ div {
     }
 }
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 810px) {
 
     .buster_card_index {
         width: 50%;
@@ -480,6 +517,14 @@ div {
         -o-transform:scale(1.05);
         transform:scale(1.05);
     }
+
+    .buster_wrapper_more {
+        width: 100%;
+    }
+
+    .buster_card_post_wrapper{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -489,7 +534,7 @@ div {
     }
 
     .buster_main {
-        padding-top: 60px;
+        /*padding-top: 55px;*/
         padding-left: 0;
         padding-right: 0;
     }

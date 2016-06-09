@@ -1,9 +1,9 @@
 {{!< default}}
 {{!-- {{> sidebar}} --}}
 {{> header}}
-<main class="buster_main" role="main">
+<main class="buster_main buster_post_view" role="main">
     {{#post}}
-    <div class="buster_card_wrapper buster_card_post">
+    <div class="buster_card_wrapper buster_card_post_wrapper">
     <div class="buster_card buster_card_post">
         <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
             <div class="buster_card_image">
@@ -32,7 +32,77 @@
             </div> --}}
             </div>
         </article>
+        </div>
     </div>
-</div>
+    </div>
+    {{#is "post"}}
+        <div class="buster_wrapper_more">
+            <div class="buster_card buster_card_more">
+                <div class="buster_read_more">
+                    <i class="fa fa-th-list" aria-hidden="true"></i> <span>Read more</span>
+                </div>
+            </div>
+        </div>
+        {{#prev_post}}
+        <div class="buster_card_wrapper buster_wrapper_more">
+        <div class="buster_card buster_card_more buster_scale">
+            <a href="{{{url}}}" rel="bookmark">
+            <div class="buster_card_image">
+                {{#if image}}
+                    <img src="{{image}}" alt="{{title}}"></img>
+                {{else}}
+                    <svg alt="{{title}}"/ >
+                {{/if}}
+                <div class="buster_card_image_filter"></div>
+                <div class="buster_card_title">
+                    <h2 class="buster_post_title" itemprop="headline">{{title}}</h2>
+                </div>
+            </div>
+            <div class="buster_card_content">
+                <div class="buster_post_summary" itemprop="articleBody">
+                    <p class="buster_post_excerpt">{{{excerpt characters="100"}}}...</p>
+                </div>
+                {{#if tags}}
+                    <div class="buster_post_tags">
+                        <i class="fa fa-tag buster_no_hover_style" aria-hidden="true"></i> {{tags separator=", "}}
+                    </div>
+                {{/if}}
+                <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+            </div>
+            </a>
+        </div>
+        </div>
+        {{/prev_post}}
+        {{#next_post}}
+        <div class="buster_card_wrapper buster_wrapper_more">
+        <div class="buster_card buster_card_more buster_scale">
+            <a href="{{{url}}}" rel="bookmark">
+            <div class="buster_card_image">
+                {{#if image}}
+                    <img src="{{image}}" alt="{{title}}"></img>
+                {{else}}
+                    <svg alt="{{title}}"/ >
+                {{/if}}
+                <div class="buster_card_image_filter"></div>
+                <div class="buster_card_title">
+                    <h2 class="buster_post_title" itemprop="headline">{{title}}</h2>
+                </div>
+            </div>
+            <div class="buster_card_content">
+                <div class="buster_post_summary" itemprop="articleBody">
+                    <p class="buster_post_excerpt">{{{excerpt characters="100"}}}...</p>
+                </div>
+                {{#if tags}}
+                    <div class="buster_post_tags">
+                        <i class="fa fa-tag buster_no_hover_style" aria-hidden="true"></i> {{tags separator=", "}}
+                    </div>
+                {{/if}}
+                <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
+            </div>
+            </a>
+        </div>
+        </div>
+        {{/next_post}}
+    {{/is}}
     {{/post}}
 </main>
