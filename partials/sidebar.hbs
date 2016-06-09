@@ -1,24 +1,17 @@
-<div class="buster_sidebar_wrapper" id="sidebar">
-<div class="buster_sidebar">
-    <div class="buster_sidebar_image">
-        <div class="buster_close_menu"><a onclick="toggle_menu();"><i class="fa fa-times" aria-hidden="true"></i></a></div>
-    {{#if @blog.cover}}
-        <a class="buster_blog_cover" href="{{@blog.url}}"><img src="{{@blog.cover}}" alt="{{@blog.title}}" /></a>
-     {{else}}
-        <a class="buster_blog_cover" href="{{@blog.url}}"><svg /></a>
-    {{/if}}
-        <h1 class="buster_blog_title">
-            <a title="{{@blog.title}}" href='{{@blog.url}}'>
-            {{{@blog.title}}}
-            </a>
-        </h1>
+<div class="buster_sidebar buster_card" id="sidebar">
+    <div class="buster_sidebar_title">
+        <a title="{{@blog.title}}" href='{{@blog.url}}'>
+            <h1>
+                {{{@blog.title}}}
+            </h1>
+        </a>
+    </div>
     <div class="buster_sidebar_logo">
     {{#if @blog.logo}}
         <a class="buster_blog_logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
     {{else}}
         <a class="buster_blog_logo" href="{{@blog.url}}"><svg /></a>
     {{/if}}
-    </div>
     </div>
     <div class="buster_sidebar_text">
     <p class="buster_blog_description">
@@ -27,11 +20,5 @@
         </a>
     </p>
     </div>
-    {{#if @blog.navigation}}
-        <div class="buster_navigation">
-            {{navigation}}
-        </div>
-    {{/if}}
     {{> footer}}
-</div>
 </div>

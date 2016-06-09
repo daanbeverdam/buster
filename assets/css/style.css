@@ -43,6 +43,22 @@ div {
     color: #696969;
 }
 
+pre {
+    background-color: #f5f5f5;
+    padding: 5px;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: lightgray;
+    background-color: lightgray;
+}
+
 /* Main elements */
 
 .buster_wrapper {
@@ -132,11 +148,20 @@ div {
 }
 
 .buster_sidebar {
-    position: relative;
-    height: 100%;
-    background: white;
-    border: solid 1px lightgray;
-    box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
+    display: none;
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    right: 15px;
+    top: 70px;
+    z-index: 1;
+}
+
+.buster_sidebar_title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: 25px;
 }
 
 .buster_blog_title {
@@ -184,9 +209,6 @@ div {
     display: block;
     width: 75px;
     height: 75px;
-    position: absolute;
-    bottom: -25px;
-    right: 12px;
     margin: auto;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
     /*border: 2px solid #FFF;*/
@@ -265,6 +287,7 @@ div {
 }
 
 .buster_main {
+    position: relative;
     margin: auto;
     height: 100%;
     padding-left: 5px;
@@ -275,6 +298,17 @@ div {
     box-sizing: border-box;
     padding-top: 60px;
     padding-bottom: 5px;
+}
+
+.buster_sunscreen {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* Mobile */
@@ -331,6 +365,9 @@ div {
     transition: transform 0.2s ease-in-out;
     -moz-transition: transform 0.2s ease-in-out;
     -o-transition: transform 0.2s ease-in-out;
+    border-radius: 3px;
+    -moz-border-topright: 3px;
+    -webkit-border-radius: 3px;
 }
 
 .buster_card_image_filter {
@@ -362,6 +399,13 @@ div {
     height: 200px;
     overflow: hidden;
     position: relative;
+    border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+
 }
 
 .buster_card_image img {
@@ -431,7 +475,6 @@ div {
 }
 
 .buster_card_post {
-    float: left;
     width: 100%;
     margin: auto;
 }
@@ -439,6 +482,12 @@ div {
 .buster_card_post_wrapper {
     float: left;
     width: 600px;
+}
+
+.buster_card_page_wrapper {
+    width: 600px;
+    margin: auto;
+    float: none;
 }
 
 .buster_card_content_post {
@@ -526,6 +575,13 @@ div {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 610px) {
+    .buster_card_page_wrapper {
+        width: 100%;
+    }
+}
+
 
 @media screen and (max-width: 550px) {
     .buster_card_index {

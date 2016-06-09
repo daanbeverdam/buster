@@ -3,7 +3,11 @@
 {{> header}}
 <main class="buster_main buster_post_view" role="main">
     {{#post}}
+    {{#is "post"}}
     <div class="buster_card_wrapper buster_card_post_wrapper">
+    {{else}}
+    <div class="buster_card_wrapper buster_card_page_wrapper">
+    {{/is}}
     <div class="buster_card buster_card_post">
         <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
             <div class="buster_card_image">

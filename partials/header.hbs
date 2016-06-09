@@ -1,13 +1,13 @@
 <div class="buster_header">
-    <div class="buster_blog_title"><a href="{{@blog.url}}"><h1>{{@blog.title}}</h1></a></div>
+    {{!-- <div class="buster_blog_title"><a href="{{@blog.url}}"><h1>{{@blog.title}}</h1></a></div> --}}
 {{!--     <div class="buster_menu_button">
         <a onclick="toggle_menu();"><i class="fa fa-bars" aria-hidden="true"></i></a>
     </div> --}}
     <div class="buster_header_logo_container">
         {{#if @blog.logo}}
-        <a href="{{@blog.url}}"><img class="buster_header_logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <a onclick="toggle_menu();"><img class="buster_header_logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
     {{else}}
-        <a href="{{@blog.url}}"><svg class="buster_header_logo"/></a>
+        <a onclick="toggle_menu();"><svg class="buster_header_logo"/></a>
     {{/if}}
     </div>
     {{#if @blog.navigation}}

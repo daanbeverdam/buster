@@ -8,10 +8,13 @@
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
     {{! Styles }}
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
     <link href='https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="/assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
     {{! Responsive Meta Tags }}
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
