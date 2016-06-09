@@ -62,7 +62,7 @@ div {
     height: 35px;
     width: 35px;
     line-height: 55px;
-    margin-left: 30px;
+    margin-left: 32px;
 }
 
 .buster_header_logo {
@@ -265,12 +265,12 @@ div {
     /*max-width: 70em;*/
     margin: auto;
     height: 100%;
-    padding: 1em;
+    padding: 5px;
     max-width: 1500px;
     overflow-x: hidden;
     overflow-y: auto;
     box-sizing: border-box;
-    padding-top: 70px;
+    padding-top: 65px;
 }
 
 /* Mobile */
@@ -310,12 +310,13 @@ div {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 1em;
+    padding: 10px;
     float: left;
 }
 
 .buster_card_index {
     width: 33.33%;
+    -webkit-animation:bounceIn 2s;
 }
 
 .buster_card {
@@ -334,10 +335,22 @@ div {
     left: 0;
     width: 100%;
     height: 100%;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.01),
+        rgba(0, 0, 0, 0.25)
+        );
+    background: -moz-linear-gradient(
+        rgba(0, 0, 0, 0.01),
+        rgba(0, 0, 0, 0.25)
+        );
     background: -webkit-linear-gradient(
-                    rgba(0, 0, 0, 0.01),
-                    rgba(0, 0, 0, 0.25)
-                );
+        rgba(0, 0, 0, 0.01),
+        rgba(0, 0, 0, 0.25)
+        );
+    background: -o-linear-gradient(
+        rgba(0, 0, 0, 0.01),
+        rgba(0, 0, 0, 0.25)
+        );
 }
 
 .buster_card_image {
@@ -385,7 +398,7 @@ div {
 }
 
 .buster_post_excerpt {
-    max-height: 4.1em;
+    height: 4.1em;
     overflow: hidden;
 }
 
@@ -396,6 +409,10 @@ div {
     overflow: hidden;
     /*color: #0090d2;*/
     font-weight: 400;
+}
+
+.buster_post_tags:hover {
+    color: #0090d2;
 }
 
 .buster_no_hover_style:hover {
@@ -412,7 +429,7 @@ div {
 
 .buster_card_content_post {
     max-width: 28em;
-    padding: 0 1em;
+    /*padding: 0 1em;*/
     padding-bottom: 1em;
 }
 
@@ -435,7 +452,7 @@ div {
         -webkit-transform:scale(1.025);
         -moz-transform:scale(1.025);
         -o-transform:scale(1.025);
-        transform:scale(1.025);
+        transform:scale(0.975);
     }
 
     .buster_mobile_header {
@@ -448,14 +465,6 @@ div {
 }
 
 @media screen and (max-width: 830px) {
-    .buster_sidebar_wrapper {
-        display: none;
-    }
-
-/*    .buster_main {
-        padding: 50px 0 0;
-        height: initial;
-    }*/
 
     .buster_card_index {
         width: 50%;
@@ -476,5 +485,12 @@ div {
 @media screen and (max-width: 550px) {
     .buster_card_index {
         width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .buster_main {
+        padding-top: 60px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
