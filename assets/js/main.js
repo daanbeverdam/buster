@@ -1,4 +1,4 @@
-function toggle_menu () {
+function toggle_sidebar () {
     menu = document.getElementById('sidebar');
     sunscreen = document.getElementById('sunscreen');
     if (menu.style.display == 'none' || menu.style.display === '') {

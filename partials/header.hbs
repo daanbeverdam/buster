@@ -5,9 +5,9 @@
     </div> --}}
     <div class="buster_header_logo_container">
         {{#if @blog.logo}}
-        <a onclick="toggle_menu();"><img class="buster_header_logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <a onclick="toggle_sidebar();"><img class="buster_header_logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
     {{else}}
-        <a onclick="toggle_menu();"><svg class="buster_header_logo"/></a>
+        <a onclick="toggle_sidebar();"><svg class="buster_header_logo"/></a>
     {{/if}}
     </div>
     {{#if @blog.navigation}}
