@@ -19,6 +19,7 @@ function toggle_navigation () {
     navigation = document.getElementById('navigation');
     if (navigation.style.display != 'block') {
         navigation.style.display = 'block';
+        scroll_to_top();
     } else {
         navigation.style.display = 'none';
     }
