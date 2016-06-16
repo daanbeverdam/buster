@@ -1,6 +1,6 @@
+{{#if next}}
 <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
 <nav class="buster_card buster_pagination">
-{{#if next}}
 {{^if prev}}
 {{!-- if next --}}
     <a class="buster_older_posts" href="{{page_url next}}"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
@@ -9,10 +9,14 @@
     <a class="buster_newer_posts" href="{{page_url prev}}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
     <a class="buster_older_posts" href="{{page_url next}}"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 {{/if}}
-{{/if}}
-{{#if prev}}
-{{!-- if previous --}}
- <a class="buster_newer_posts" href="{{page_url prev}}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
-{{/if}}
 </nav>
 </div>
+{{/if}}
+{{#if prev}}
+<div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
+<nav class="buster_card buster_pagination">
+{{!-- if previous --}}
+<a class="buster_newer_posts" href="{{page_url prev}}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+</nav>
+</div>
+{{/if}}
