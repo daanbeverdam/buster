@@ -1,7 +1,8 @@
 {{!< default}}
 {{> sidebar}}
 {{> header}}
-<main class="buster_main buster_post_view" role="main">
+<main class="buster_main buster_post_view" role="main" id="content">
+    {{> sidenavigation}}
     {{#post}}
     {{#is "post"}}
     <div class="buster_card_wrapper buster_card_post_wrapper">
@@ -109,5 +110,10 @@
         {{/next_post}}
     {{/is}}
     {{/post}}
+{{!--     <div class="buster_card_wrapper buster_scroll_message" onclick="scroll_to_top()">
+    <div class="buster_card">
+    <span>SCROLL TO TOP!</span>
+    </div>
+    </div> --}}
 </main>
 <div class="buster_sunscreen" id="sunscreen" onclick="toggle_sidebar()"></div>

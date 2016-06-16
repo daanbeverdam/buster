@@ -15,6 +15,19 @@ function toggle_sidebar () {
     }
 }
 
+function toggle_navigation () {
+    navigation = document.getElementById('navigation');
+    if (navigation.style.display != 'block') {
+        navigation.style.display = 'block';
+    } else {
+        navigation.style.display = 'none';
+    }
+}
+
+function scroll_to_top() {
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
+}
+
 function check_navigation () {
     items = document.getElementsByClassName('buster_navigation_item');
     for (var i = 0; i < items.length; i++) {
@@ -25,3 +38,13 @@ function check_navigation () {
         }
     }
 }
+
+$(document).scroll(function () {
+    var y = $(this).scrollTop();
+    if (y > 220) {
+        $('.buster_scroll_message').fadeIn();
+    } else {
+        $('.buster_scroll_message').fadeOut();
+    }
+
+});

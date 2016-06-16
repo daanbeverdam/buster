@@ -1,7 +1,8 @@
 {{!< default}}
 {{> sidebar}}
 {{> header}}
-<main class="buster_main" role="main">
+<main class="buster_main" role="main" id="content">
+    {{> sidenavigation}}
     {{#foreach posts}}
     <div class="buster_card_wrapper buster_card_index">
     <a href="{{{url}}}" rel="bookmark">

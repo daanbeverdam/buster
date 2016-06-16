@@ -1,14 +1,14 @@
 {{#if next}}
+{{^if prev}}
+{{!-- if next --}}
 <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
 <nav class="buster_card buster_pagination">
         <a class="buster_older_posts" href="{{page_url next}}"><i class="fa fa-chevron-right" aria-hidden="true"></i>
 </a>
 </nav>
 </div>
-{{/if}}
-
-{{#if prev}}
-{{#if next}}
+{{else}}
+{{!-- if next and previous --}}
 <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
 <nav class="buster_card buster_pagination">
  <a class="buster_newer_posts" href="{{page_url prev}}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
@@ -16,11 +16,12 @@
 </a>
 </nav>
 </div>
+{{/if}}
 {{else}}
+{{!-- if previous --}}
 <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
 <nav class="buster_card buster_pagination">
  <a class="buster_newer_posts" href="{{page_url prev}}"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
 </nav>
 </div>
-{{/if}}
 {{/if}}
