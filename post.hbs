@@ -41,6 +41,7 @@
     </div>
     </div>
     {{#is "post"}}
+    <div class="buster_wrapper_more_articles">
         <div class="buster_wrapper_more">
             <div class="buster_card buster_card_more">
                 <div class="buster_read_more">
@@ -49,65 +50,12 @@
             </div>
         </div>
         {{#prev_post}}
-        <div class="buster_card_wrapper buster_wrapper_more">
-        <div class="buster_card buster_card_more buster_scale">
-            <a href="{{{url}}}" rel="bookmark">
-            <div class="buster_card_image">
-                {{#if image}}
-                    <img src="{{image}}" alt="{{title}}"></img>
-                {{else}}
-                    <svg alt="{{title}}"/ >
-                {{/if}}
-                <div class="buster_card_image_filter"></div>
-                <div class="buster_card_title">
-                    <h3 class="buster_post_title" itemprop="headline">{{title}}</h3>
-                </div>
-            </div>
-            <div class="buster_card_content">
-                <div class="buster_post_summary" itemprop="articleBody">
-                    <p class="buster_post_excerpt">{{{excerpt characters="100"}}}...</p>
-                </div>
-                {{#if tags}}
-                    <div class="buster_post_tags">
-                        <i class="fa fa-tag buster_no_hover_style" aria-hidden="true"></i> {{tags separator=", "}}
-                    </div>
-                {{/if}}
-                <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-            </div>
-            </a>
-        </div>
-        </div>
+        {{> postcardmore}}
         {{/prev_post}}
         {{#next_post}}
-        <div class="buster_card_wrapper buster_wrapper_more">
-        <div class="buster_card buster_card_more buster_scale">
-            <a href="{{{url}}}" rel="bookmark">
-            <div class="buster_card_image">
-                {{#if image}}
-                    <img src="{{image}}" alt="{{title}}"></img>
-                {{else}}
-                    <svg alt="{{title}}"/ >
-                {{/if}}
-                <div class="buster_card_image_filter"></div>
-                <div class="buster_card_title">
-                    <h3 class="buster_post_title" itemprop="headline">{{title}}</h3>
-                </div>
-            </div>
-            <div class="buster_card_content">
-                <div class="buster_post_summary" itemprop="articleBody">
-                    <p class="buster_post_excerpt">{{{excerpt characters="100"}}}...</p>
-                </div>
-                {{#if tags}}
-                    <div class="buster_post_tags">
-                        <i class="fa fa-tag buster_no_hover_style" aria-hidden="true"></i> {{tags separator=", "}}
-                    </div>
-                {{/if}}
-                <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
-            </div>
-            </a>
-        </div>
-        </div>
+        {{> postcardmore}}
         {{/next_post}}
+    </div>
     {{/is}}
     {{/post}}
 {{!--     <div class="buster_card_wrapper buster_scroll_message" onclick="scroll_to_top()">
