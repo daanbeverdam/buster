@@ -14,15 +14,18 @@
         </div>
         <div class="buster_card_content">
             <div class="buster_post_summary" itemprop="articleBody">
-                <p class="buster_post_excerpt">{{{excerpt words="30"}}}</p>
+                <p class="buster_post_excerpt">{{{excerpt words="50"}}}</p>
             </div>
+        </a>
             {{#if tags}}
+            <div class="buster_post_tags_wrapper">
                 <div class="buster_post_tags">
-                    <i class="fa fa-tag buster_no_hover_style" aria-hidden="true"></i> {{tags separator=", "}}
+                    <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
                 </div>
+            </div>
             {{/if}}
             <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
         </div>
-        </a>
+
     </div>
 </div>

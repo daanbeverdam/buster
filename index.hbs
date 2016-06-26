@@ -6,7 +6,7 @@
     {{#foreach posts}}
     <div class="buster_card_wrapper buster_card_index">
     <a href="{{{url}}}" rel="bookmark">
-        <article class="buster_card buster_scale" role="article" itemscope itemtype="http://schema.org/Article">
+        <article onclick="location.href='{{{url}}}';" class="buster_card buster_scale" role="article" itemscope itemtype="http://schema.org/Article">
             <div class="buster_card_image">
                 {{#if image}}
                     <img src="{{image}}" alt="{{title}}"></img>
@@ -20,17 +20,20 @@
             </div>
             <div class="buster_card_content">
                 <div class="buster_post_summary" itemprop="articleBody">
-                    <p class="buster_post_excerpt">{{{excerpt words="30"}}}</p>
+                    <p class="buster_post_excerpt">{{{excerpt words="50"}}}</p>
                 </div>
+    </a>
                 {{#if tags}}
+                <div class="buster_post_tags_wrapper">
                     <div class="buster_post_tags">
-                        <i class="fa fa-tag buster_no_hover_style" aria-hidden="true"></i> {{tags separator=", "}}
+                        <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
                     </div>
+                </div>
                 {{/if}}
                 <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
             </div>
         </article>
-    </a>
+
     </div>
     {{/foreach}}
     {{#if pagination}}

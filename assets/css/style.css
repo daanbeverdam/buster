@@ -404,10 +404,10 @@ hr {
     float: left;
     background: white;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
-    -webkit-transition: transform 0.2s ease-in-out;
-    transition: transform 0.2s ease-in-out;
-    -moz-transition: transform 0.2s ease-in-out;
-    -o-transition: transform 0.2s ease-in-out;
+    -webkit-transition: transform 0.1s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+    -moz-transition: transform 0.1s ease-in-out;
+    -o-transition: transform 0.1s ease-in-out;
     border-radius: 3px;
     -moz-border-topright: 3px;
     -webkit-border-radius: 3px;
@@ -494,7 +494,7 @@ hr {
     overflow: hidden;
 }
 
-.buster_post_tags {
+.buster_post_tags_wrapper {
     border-top: 1px solid lightgray;
     padding-top: 1em;
     max-height: 22px;
@@ -504,11 +504,7 @@ hr {
 }
 
 .buster_post_tags:hover {
-    color: #0090d2;
-}
-
-.buster_no_hover_style:hover {
-    color: inherit;
+    /*color: #0090d2;*/
 }
 
 .buster_wrapper_pagination {
@@ -528,6 +524,13 @@ hr {
     margin-top: -50px;
     line-height: 100px;
     text-align: center;
+}
+
+.buster_pagination:hover {
+    -webkit-transform:scale(0.95);
+    -moz-transform:scale(0.95);
+    -o-transform:scale(0.95);
+    transform:scale(0.95);
 }
 
 /* Post view */
@@ -555,7 +558,7 @@ hr {
 }
 
 .buster_card_content_post {
-    text-align: justify;
+    /*text-align: justify;*/
     /*max-width: 30em;*/
     /*padding: 0 1em;*/
     /*padding-bottom: 1em;*/
@@ -617,10 +620,10 @@ hr {
 
 @media screen and (min-width: 1000px) {
     .buster_scale:hover {
-        -webkit-transform:scale(0.95);
-        -moz-transform:scale(0.95);
-        -o-transform:scale(0.95);
-        transform:scale(0.95);
+        -webkit-transform:scale(0.985);
+        -moz-transform:scale(0.985);
+        -o-transform:scale(0.985);
+        transform:scale(0.985);
     }
 
     .buster_mobile_header {

@@ -25,9 +25,11 @@
             <div class="buster_card_content buster_card_content_post" itemprop="articleBody">
                 {{content}}
             {{#if tags}}
+            <div class="buster_post_tags_wrapper">
                 <div class="buster_post_tags">
                     <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
                 </div>
+            </div>
             {{/if}}
             {{!-- <div class="buster_share_post">
                 <h4 class="buster_share">Share this post: &nbsp;</h4>
