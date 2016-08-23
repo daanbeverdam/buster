@@ -55,6 +55,9 @@ pre {
 
 code {
     background-color: #f5f5f5;
+    font-size: 14px;
+    margin: 2px;
+    padding: 1px 3px;
 }
 
 blockquote {
@@ -284,17 +287,6 @@ hr {
 .buster_navigation_item:hover {
     background-color: #D6F3F0;
 }*/
-
-.buster_social {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.buster_social_link {
-    font-size: 30px;
-    margin: 2px;
-    color: #0090d2;
-}
 
 .buster_footer {
     position: absolute;
