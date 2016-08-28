@@ -355,6 +355,7 @@ hr {
     display: none;
     width: 100%;
     height: 75px;
+    margin-bottom: 5px;
 }
 
 .buster_mobile_navigation_card {
