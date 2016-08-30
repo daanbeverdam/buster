@@ -558,6 +558,10 @@ hr {
     /*padding-bottom: 1em;*/
 }
 
+.buster_card_content_post a {
+    font-weight: 400;
+}
+
 .buster_card_content_post h2 {
     font-weight: 500;
     font-size: 18px;
