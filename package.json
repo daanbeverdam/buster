@@ -1,8 +1,9 @@
 {
   "name": "Buster",
-  "version": "0.0.1",
-  "description": "A minimal theme.",
+  "version": "1.0.0",
+  "description": "A lightweight, cards UI theme for Ghost.",
   "author": {
-    "name": "Daan Beverdam"
+    "name": "Daan Beverdam",
+    "website": "www.daanbeverdam.com"
   }
 }
