@@ -10,7 +10,7 @@
     <div class="buster_card_wrapper buster_card_page_wrapper">
     {{/is}}
     <div class="buster_card buster_card_post">
-        <article class="buster_article" role="article" itemscope itemtype="http://schema.org/Article">
+        <article class="buster_article">
             <div class="buster_card_image">
                 {{#if image}}
                     <img src="{{image}}" alt="{{title}}"></img>
@@ -19,10 +19,10 @@
                 {{/if}}
                 <div class="buster_card_image_filter"></div>
                 <div class="buster_card_title">
-                    <h1 class="buster_post_title" itemprop="headline">{{title}}</h1>
+                    <h1 class="buster_post_title">{{title}}</h1>
                 </div>
             </div>
-            <div class="buster_card_content buster_card_content_post" itemprop="articleBody">
+            <div class="buster_card_content buster_card_content_post">
                 {{content}}
             {{#if tags}}
             <div class="buster_post_tags_wrapper">
@@ -66,4 +66,3 @@
     </div>
     </div> --}}
 </main>
-<div class="buster_sunscreen" id="sunscreen" onclick="toggle_sidebar()"></div>
