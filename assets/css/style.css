@@ -172,14 +172,13 @@ hr {
 }
 
 .buster_sidebar {
-    display: none;
     width: 300px;
     height: 400px;
     margin-top: -172.5px; /*should be half the height - 27.5px*/
     margin-left: -150px; /*should be half the width*/
     z-index: 1;
     position: fixed;
-    top: 50%;
+    top: 150%; /*begins out of sight*/
     left: 50%;
 }
 
