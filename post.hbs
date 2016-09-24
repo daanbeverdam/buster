@@ -1,8 +1,9 @@
 {{!< default}}
 {{> sidebar}}
-{{> header}}
-<main class="buster_main buster_post_view" role="main" id="content">
-    {{> sidenavigation}}
+{{> sidenavigation}}
+<main class="buster_main" role="main" id="content">
+    {{> header}}
+    <div class="buster_main_content_wrapper buster_post_view">
     {{#post}}
     {{#is "post"}}
     <div class="buster_card_wrapper buster_card_post_wrapper">
@@ -41,7 +42,7 @@
         </article>
         </div>
     </div>
-    </div>
+
     {{#is "post"}}
     <div class="buster_wrapper_more_articles">
         <div class="buster_wrapper_more">
@@ -65,4 +66,5 @@
     <span>SCROLL TO TOP!</span>
     </div>
     </div> --}}
+    </div>
 </main>

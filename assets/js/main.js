@@ -1,6 +1,5 @@
 function toggle_sidebar () {
     menu = document.getElementById('sidebar');
-    sunscreen = document.getElementById('sunscreen');
     if (menu.style.top == '150%' || menu.style.top === '') {
         $('#sunscreen').fadeIn('slow');
         $('#sidebar').animate({'top': '50%'}, 500);
@@ -11,12 +10,14 @@ function toggle_sidebar () {
 }
 
 function toggle_navigation () {
-    navigation = document.getElementById('navigation');
-    if (navigation.style.display != 'block') {
-        navigation.style.display = 'block';
-        scroll_to_top();
+    if ($('#content').css('left') === '150px') {
+        $('#content').animate({'left': '0px'}, 250);
+        $('body').css('overflow', 'initial');
+        $('body').css('position', 'relative');
     } else {
-        navigation.style.display = 'none';
+        $('#content').animate({'left': '150px'}, 250);
+        $('body').css('overflow', 'hidden');
+        $('body').css('position', 'fixed');
     }
 }
 
