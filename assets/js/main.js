@@ -2,13 +2,11 @@ function toggle_sidebar () {
     infocard = document.getElementById('sidebar');
     sunscreen = document.getElementById('sunscreen');
     if (infocard.style.top == '150%' || infocard.style.top === '') {
-        sunscreen.style.display = 'block';
-        Velocity(sunscreen, {opacity: 0.25}, 250);
-        Velocity(infocard, {'top': '50%'}, 500);
+        Velocity(sunscreen, {opacity: 0.25}, {display: 'block'});
+        Velocity(infocard, {'top': '50%'}, 600);
     } else {
-        Velocity(sunscreen, {opacity: 0.25}, 250);
-        Velocity(infocard, {'top': '150%'}, 500);
-        sunscreen.style.display = 'none'; // todo: put in callback
+        Velocity(sunscreen, {opacity: 0}, {display: 'none'});
+        Velocity(infocard, {'top': '150%'}, 600);
     }
 }
 
