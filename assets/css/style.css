@@ -352,7 +352,7 @@ hr {
     background: white;
     height: 100%;
     position: fixed;
-    max-width: 150px;
+    width: 150px;
 }
 
 .buster_side_navigation {
