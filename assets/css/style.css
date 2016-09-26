@@ -710,4 +710,8 @@ hr {
         /*padding-top: 55px;*/
         padding: 0px;
     }
+
+    .buster_main {
+        padding-bottom: 10px;
+    }
 }
