@@ -1,13 +1,9 @@
 html {
-    height: 100%;
-    width: 100%;
 }
 
 body {
     background-color: white;
     font-family: 'Roboto';
-    height: 100%;
-    width: 100%;
     margin: auto;
     position: relative;
 }
