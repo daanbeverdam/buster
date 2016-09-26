@@ -3,6 +3,7 @@
 {{> sidenavigation}}
 <main class="buster_main" role="main" id="content">
     {{> header}}
+    <div class="buster_articles_wrapper">
         {{#foreach posts}}
         <div class="buster_card_wrapper buster_card_index">
             <article onclick="location.href='{{{url}}}';" class="buster_card buster_scale" role="article">
@@ -38,4 +39,5 @@
         {{#if pagination}}
             {{{pagination}}}
         {{/if}}
+    </div>
 </main>
