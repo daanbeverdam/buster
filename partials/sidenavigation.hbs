@@ -1,5 +1,7 @@
-<div class="buster_card_wrapper buster_mobile_navigation_wrapper" id="navigation">
-<div class="buster_card buster_mobile_navigation_card">
-{{navigation}}
-</div>
+<div class="buster_side_navigation_wrapper" id="navigation">
+    <div class="buster_side_navigation">
+    {{#if @blog.navigation}}
+        {{navigation}}
+    {{/if}}
+    </div>
 </div>

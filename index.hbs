@@ -1,41 +1,43 @@
 {{!< default}}
 {{> sidebar}}
-{{> header}}
+{{> sidenavigation}}
 <main class="buster_main" role="main" id="content">
-    {{> sidenavigation}}
-    {{#foreach posts}}
-    <div class="buster_card_wrapper buster_card_index">
-        <article onclick="location.href='{{{url}}}';" class="buster_card buster_scale" role="article">
-            <a href="{{{url}}}" rel="bookmark">
-                <div class="buster_card_image">
-                    {{#if image}}
-                        <img src="{{image}}" alt="{{title}}"></img>
-                    {{else}}
-                        <svg alt="{{title}}"/ >
+    {{> header}}
+    <div class="buster_articles_wrapper">
+        {{#foreach posts}}
+        <div class="buster_card_wrapper buster_card_index">
+            <article onclick="location.href='{{{url}}}';" class="buster_card buster_scale" role="article">
+                <a href="{{{url}}}" rel="bookmark">
+                    <div class="buster_card_image">
+                        {{#if image}}
+                            <img src="{{image}}" alt="{{title}}"></img>
+                        {{else}}
+                            <svg alt="{{title}}"/ >
+                        {{/if}}
+                        <div class="buster_card_image_filter"></div>
+                        <div class="buster_card_title">
+                            <h2 class="buster_post_title">{{title}}</h2>
+                        </div>
+                    </div>
+                    <div class="buster_card_content">
+                        <div class="buster_post_summary">
+                            <p class="buster_post_excerpt">{{{excerpt words="50"}}}</p>
+                        </div>
+                </a>
+                    {{#if tags}}
+                    <div class="buster_post_tags_wrapper">
+                        <div class="buster_post_tags">
+                            <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
+                        </div>
+                    </div>
                     {{/if}}
-                    <div class="buster_card_image_filter"></div>
-                    <div class="buster_card_title">
-                        <h2 class="buster_post_title">{{title}}</h2>
-                    </div>
+                    <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}">
                 </div>
-                <div class="buster_card_content">
-                    <div class="buster_post_summary">
-                        <p class="buster_post_excerpt">{{{excerpt words="50"}}}</p>
-                    </div>
-            </a>
-                {{#if tags}}
-                <div class="buster_post_tags_wrapper">
-                    <div class="buster_post_tags">
-                        <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
-                    </div>
-                </div>
-                {{/if}}
-                <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}">
-            </div>
-        </article>
+            </article>
+        </div>
+        {{/foreach}}
+        {{#if pagination}}
+            {{{pagination}}}
+        {{/if}}
     </div>
-    {{/foreach}}
-    {{#if pagination}}
-        {{{pagination}}}
-    {{/if}}
 </main>
