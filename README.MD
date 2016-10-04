@@ -2,8 +2,10 @@
 
 Buster is a lightweight, open source theme for the [Ghost blogging platform](https://ghost.org/). It features a simple, clean card UI and is fully responsive.
 
-## Screenshots
+## Desktop view
 
-Screenshots of the theme will follow soon.
+<img src="https://www.daanbeverdam.com/files/images/buster-theme-for-ghost-desktop.png"></img>
 
+## Mobile and Tablet view
 
+<img src="https://www.daanbeverdam.com/files/images/buster-theme-for-ghost-mobile.png" style="float:left;"  width="31.16%"></img><img src="https://www.daanbeverdam.com/files/images/buster-theme-for-ghost-tablet.png" style="float:right;" width="63.84%"></img>
