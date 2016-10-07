@@ -1,4 +1,3 @@
-/*jshint esversion: 6 */
 var showing_sidebar = false;
 var showing_navigation = false;
 
@@ -7,7 +6,7 @@ function toggle_sidebar () {
     if (infocard.style.top == '150%' || infocard.style.top === '') {
         showing_sidebar = true;
         Velocity(infocard, {'top': '50%'}, 600);
-        show_sunscreen();
+        show_sunscreen(true, 0.25);
     } else {
         showing_sidebar = false;
         Velocity(infocard, {'top': '150%'}, 600);
@@ -32,7 +31,7 @@ function toggle_navigation () {
     }
 }
 
-function show_sunscreen (bool=true, opacity=0.25) {
+function show_sunscreen (bool, opacity) {
     sunscreen = document.getElementById('sunscreen');
     if (bool) {
         Velocity(sunscreen, {opacity: opacity}, {display: 'block'});
