@@ -1,6 +1,7 @@
 {{!< default}}
-<div class="buster_card_wrapper buster_card_index">
-    <div class="buster_card buster_scale">
-        <span>Oops, that page doesn't exist!</span>
+<div class="buster_card_wrapper buster_error_card_wrapper buster_card_index">
+    <div onclick="location.href='{{@blog.url}}';" class="buster_card buster_scale buster_error_card">
+        <h1 class="buster_error_title">Not found!</h1>
+        <p>This page doesn't exist. Click <a href="{{@blog.url}}">here</a> to return home.</p>
     </div>
 </div>
