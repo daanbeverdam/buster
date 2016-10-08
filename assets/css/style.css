@@ -171,6 +171,7 @@ hr {
 }
 
 .buster_sidebar {
+    display: none;
     width: 300px;
     height: 400px;
     margin-top: -172.5px; /*should be half the height - 27.5px*/

@@ -5,11 +5,11 @@ function toggle_sidebar () {
     infocard = document.getElementById('sidebar');
     if (infocard.style.top == '150%' || infocard.style.top === '') {
         showing_sidebar = true;
-        Velocity(infocard, {'top': '50%'}, 600);
+        Velocity(infocard, {'top': '50%'}, {display: 'block'});
         show_sunscreen(true, 0.25);
     } else {
         showing_sidebar = false;
-        Velocity(infocard, {'top': '150%'}, 600);
+        Velocity(infocard, {'top': '150%'}, {display: 'none'});
     }
 }
 
@@ -52,7 +52,7 @@ function clear_sunscreen () {
         toggle_navigation();
     } else if (showing_sidebar) {
         toggle_sidebar();
-    } else {
+    } else if (showing_navigation){
         toggle_navigation();
     }
     show_sunscreen(false);
