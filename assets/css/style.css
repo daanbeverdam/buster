@@ -234,6 +234,7 @@ hr {
     width: 100px;
     height: 100px;
     margin: auto;
+    object-fit: cover;
     box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);
     /*border: 2px solid #FFF;*/
     -webkit-border-radius: 50px;
@@ -505,7 +506,7 @@ hr {
     overflow: hidden;
 }
 
-.buster_post_tags_wrapper {
+.buster_post_footer_wrapper {
     border-top: 1px solid lightgray;
     padding-top: 1em;
     max-height: 22px;
@@ -514,8 +515,16 @@ hr {
     font-weight: 400;
 }
 
-.buster_post_tags:hover {
-    /*color: #0090d2;*/
+.buster_post_footer i {
+    margin-right: 3px;
+}
+
+.buster_post_tags {
+    padding-right: 5px;
+}
+
+.buster_post_date {
+    float: right;
 }
 
 .buster_wrapper_pagination {

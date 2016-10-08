@@ -20,7 +20,12 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    {{{body}}}
+    {{> sidebar}}
+    {{> sidenavigation}}
+    <main class="buster_main" role="main" id="content">
+        {{> header}}
+        {{{body}}}
+    </main>
     <div class="buster_sunscreen" id="sunscreen" onclick="clear_sunscreen()"></div>
     {{ghost_foot}}
 </body>

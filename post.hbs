@@ -1,72 +1,68 @@
 {{!< default}}
-{{> sidebar}}
-{{> sidenavigation}}
-<main class="buster_main" role="main" id="content">
-    {{> header}}
-    <div class="buster_articles_wrapper">
-    <div class="buster_post_view">
-    {{#post}}
-    {{#is "post"}}
-    <div class="buster_card_wrapper buster_card_post_wrapper">
-    {{else}}
-    <div class="buster_card_wrapper buster_card_page_wrapper">
-    {{/is}}
-    <div class="buster_card buster_card_post">
-        <article class="buster_article">
-            <div class="buster_card_image">
-                {{#if image}}
-                    <img src="{{image}}" alt="{{title}}"></img>
-                {{else}}
-                    <svg alt="{{title}}"/ >
-                {{/if}}
-                <div class="buster_card_image_filter"></div>
-                <div class="buster_card_title">
-                    <h1 class="buster_post_title">{{title}}</h1>
-                </div>
-            </div>
-            <div class="buster_card_content buster_card_content_post">
-                {{content}}
-            {{#if tags}}
-            <div class="buster_post_tags_wrapper">
-                <div class="buster_post_tags">
-                    <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
-                </div>
-            </div>
+<div class="buster_articles_wrapper">
+<div class="buster_post_view">
+{{#post}}
+{{#is "post"}}
+<div class="buster_card_wrapper buster_card_post_wrapper">
+{{else}}
+<div class="buster_card_wrapper buster_card_page_wrapper">
+{{/is}}
+<div class="buster_card buster_card_post">
+    <article class="buster_article">
+        <div class="buster_card_image">
+            {{#if image}}
+                <img src="{{image}}" alt="{{title}}"></img>
+            {{else}}
+                <svg alt="{{title}}"/ >
             {{/if}}
-            {{!-- <div class="buster_share_post">
-                <h4 class="buster_share">Share this post: &nbsp;</h4>
-                <a class="buster_share icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="buster_hide_this">Twitter</span></a>
-                <a class="buster_share icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="buster_hide_this">Facebook</span></a>
-                <a class="buster_share icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="buster_hide_this">Google+</span></a>
-            </div> --}}
+            <div class="buster_card_image_filter"></div>
+            <div class="buster_card_title">
+                <h1 class="buster_post_title">{{title}}</h1>
             </div>
-        </article>
         </div>
+        <div class="buster_card_content buster_card_content_post">
+            {{content}}
+        {{#if tags}}
+        <div class="buster_post_footer_wrapper">
+            <div class="buster_post_footer">
+                <span class="buster_post_tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
+                <span class="buster_post_date"><i class="fa fa-calendar" aria-hidden="true"></i><time>{{date}}</time></span>
+            </div>
+        </div>
+        {{/if}}
+        {{!-- <div class="buster_share_post">
+            <h4 class="buster_share">Share this post: &nbsp;</h4>
+            <a class="buster_share icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="buster_hide_this">Twitter</span></a>
+            <a class="buster_share icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="buster_hide_this">Facebook</span></a>
+            <a class="buster_share icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="buster_hide_this">Google+</span></a>
+        </div> --}}
+        </div>
+    </article>
     </div>
+</div>
 
-    {{#is "post"}}
-    <div class="buster_wrapper_more_articles">
-        <div class="buster_wrapper_more">
-            <div class="buster_card buster_card_more">
-                <div class="buster_read_more">
-                    <h2><i class="fa fa-th-list" aria-hidden="true"></i> Read more</h2>
-                </div>
+{{#is "post"}}
+<div class="buster_wrapper_more_articles">
+    <div class="buster_wrapper_more">
+        <div class="buster_card buster_card_more">
+            <div class="buster_read_more">
+                <h2><i class="fa fa-th-list" aria-hidden="true"></i> Read more</h2>
             </div>
         </div>
-        {{#prev_post}}
-        {{> postcardmore}}
-        {{/prev_post}}
-        {{#next_post}}
-        {{> postcardmore}}
-        {{/next_post}}
     </div>
-    {{/is}}
-    {{/post}}
+    {{#prev_post}}
+    {{> postcardmore}}
+    {{/prev_post}}
+    {{#next_post}}
+    {{> postcardmore}}
+    {{/next_post}}
+</div>
+{{/is}}
+{{/post}}
 {{!--     <div class="buster_card_wrapper buster_scroll_message" onclick="scroll_to_top()">
-    <div class="buster_card">
-    <span>SCROLL TO TOP!</span>
-    </div>
-    </div> --}}
-    </div>
-    </div>
-</main>
+<div class="buster_card">
+<span>SCROLL TO TOP!</span>
+</div>
+</div> --}}
+</div>
+</div>
