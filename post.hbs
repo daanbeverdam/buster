@@ -23,9 +23,10 @@
         <div class="buster_card_content buster_card_content_post">
             {{content}}
         {{#if tags}}
-        <div class="buster_post_tags_wrapper">
-            <div class="buster_post_tags">
-                <i class="fa fa-tag" aria-hidden="true"></i> {{tags separator=", "}}
+        <div class="buster_post_footer_wrapper">
+            <div class="buster_post_footer">
+                <span class="buster_post_tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
+                <span class="buster_post_date"><i class="fa fa-calendar" aria-hidden="true"></i><time>{{date}}</time></span>
             </div>
         </div>
         {{/if}}

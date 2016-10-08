@@ -506,7 +506,7 @@ hr {
     overflow: hidden;
 }
 
-.buster_post_tags_wrapper {
+.buster_post_footer_wrapper {
     border-top: 1px solid lightgray;
     padding-top: 1em;
     max-height: 22px;
@@ -515,8 +515,16 @@ hr {
     font-weight: 400;
 }
 
-.buster_post_tags:hover {
-    /*color: #0090d2;*/
+.buster_post_footer i {
+    margin-right: 3px;
+}
+
+.buster_post_tags {
+    padding-right: 5px;
+}
+
+.buster_post_date {
+    float: right;
 }
 
 .buster_wrapper_pagination {
@@ -730,5 +738,9 @@ hr {
     .buster_articles_wrapper {
         /*padding-top: 55px;*/
         padding: 0px;
+    }
+
+    .buster_main {
+        padding-bottom: 10px;
     }
 }
