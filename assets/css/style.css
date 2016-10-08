@@ -553,6 +553,20 @@ hr {
     transform:scale(0.95);
 }
 
+.buster_error_wrapper {
+    margin-top: 1.8em;
+    padding: 10px;
+}
+
+.buster_error {
+    text-align: center;
+}
+
+.buster_error_title {
+    font-weight: 600;
+    font-size: 48px;
+}
+
 /* Post view */
 
 .buster_post_view {
