@@ -22,14 +22,14 @@
         </div>
         <div class="buster_card_content buster_card_content_post">
             {{content}}
-        {{#if tags}}
         <div class="buster_post_footer_wrapper">
             <div class="buster_post_footer">
+                {{#if tags}}
                 <span class="buster_post_tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
+                {{/if}}
                 <span class="buster_post_date"><i class="fa fa-calendar" aria-hidden="true"></i><time>{{date}}</time></span>
             </div>
         </div>
-        {{/if}}
         {{!-- <div class="buster_share_post">
             <h4 class="buster_share">Share this post: &nbsp;</h4>
             <a class="buster_share icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="buster_hide_this">Twitter</span></a>

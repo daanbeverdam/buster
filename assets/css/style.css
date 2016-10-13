@@ -515,6 +515,10 @@ hr {
     font-weight: 400;
 }
 
+.buster_post_footer {
+    position: relative;
+}
+
 .buster_post_footer i {
     margin-right: 3px;
 }
@@ -524,7 +528,24 @@ hr {
 }
 
 .buster_post_date {
-    float: right;
+    background: white;
+    position: absolute;
+    right: 0;
+    padding-left: 1px;
+}
+
+.buster_post_date:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: -30px;
+    background: white;
+    background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1) 80%);
+    background: -o-linear-gradient(to right, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1) 80%);
+    background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1) 80%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.0), rgba(255, 255, 255, 1) 80%);
+    width: 30px;
+    height: 100%;
 }
 
 .buster_wrapper_pagination {
