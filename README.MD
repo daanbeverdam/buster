@@ -8,8 +8,4 @@ Buster is a lightweight, open source theme for the [Ghost blogging platform](htt
 
 ## Mobile view
 
-<img src="https://www.daanbeverdam.com/files/images/buster-theme-for-ghost-mobile.png" width="32.8%"></img>
-
-## Tablet view
-
-<img src="https://www.daanbeverdam.com/files/images/buster-theme-for-ghost-tablet.png" width="67.2%"></img>
+<img src="https://www.daanbeverdam.com/files/images/buster-theme-for-ghost-mobile.png" width="36%"></img>
