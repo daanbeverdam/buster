@@ -1,33 +1,33 @@
 {{!< default}}
-<div class="buster_articles_wrapper">
+<div class="articles_wrapper">
     {{#foreach posts}}
-    <div class="buster_card_wrapper buster_card_index">
-        <article onclick="location.href='{{{url}}}';" class="buster_card buster_scale" role="article">
+    <div class="card_wrapper card_index">
+        <article onclick="location.href='{{{url}}}';" class="card scale" role="article">
             <a href="{{{url}}}" rel="bookmark">
-                <div class="buster_card_image">
+                <div class="card_image">
                     {{#if image}}
                         <img src="{{image}}" alt="{{title}}"></img>
                     {{else}}
                         <svg alt="{{title}}"/ >
                     {{/if}}
-                    <div class="buster_card_image_filter"></div>
-                    <div class="buster_card_title">
-                        <h2 class="buster_post_title">{{title}}</h2>
+                    <div class="card_image_filter"></div>
+                    <div class="card_title">
+                        <h2 class="post_title">{{title}}</h2>
                     </div>
                 </div>
-                <div class="buster_card_content">
-                    <div class="buster_post_summary">
-                        <p class="buster_post_excerpt">{{{excerpt words="50"}}}</p>
+                <div class="card_content">
+                    <div class="post_summary">
+                        <p class="post_excerpt">{{{excerpt words="50"}}}</p>
                     </div>
             </a>
                 {{#if tags}}
-                <div class="buster_post_footer_wrapper">
-                    <div class="buster_post_footer">
+                <div class="post_footer_wrapper">
+                    <div class="post_footer">
                         <i class="fa fa-tag" aria-hidden="true"></i>{{tags separator=", "}}
                     </div>
                 </div>
                 {{/if}}
-                <time class="buster_date" datetime="{{date format="YYYY-MM-DD"}}">
+                <time class="date" datetime="{{date format="YYYY-MM-DD"}}">
             </div>
         </article>
     </div>

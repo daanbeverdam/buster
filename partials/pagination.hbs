@@ -1,26 +1,26 @@
 {{#if next}}
 {{^if prev}}
 {{!-- if next --}}
-    <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
-    <a class="buster_older_posts" href="{{page_url next}}">
-    <nav class="buster_card buster_pagination">
+    <div class="card_wrapper card_index wrapper_pagination">
+    <a class="older_posts" href="{{page_url next}}">
+    <nav class="card pagination">
     <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </nav>
     </a>
     </div>
 {{else}}
 {{!-- if next and previous --}}
-    <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
-    <a class="buster_newer_posts" href="{{page_url prev}}">
-    <nav class="buster_card buster_pagination">
+    <div class="card_wrapper card_index wrapper_pagination">
+    <a class="newer_posts" href="{{page_url prev}}">
+    <nav class="card pagination">
     {{!-- if previous --}}
     <i class="fa fa-chevron-left" aria-hidden="true"></i>
     </nav>
     </a>
     </div>
-    <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
-    <a class="buster_older_posts" href="{{page_url next}}">
-    <nav class="buster_card buster_pagination">
+    <div class="card_wrapper card_index wrapper_pagination">
+    <a class="older_posts" href="{{page_url next}}">
+    <nav class="card pagination">
     <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </nav>
     </a>
@@ -29,9 +29,9 @@
 {{/if}}
 {{#if prev}}
 {{^if next}}
-    <div class="buster_card_wrapper buster_card_index buster_wrapper_pagination">
-    <a class="buster_newer_posts" href="{{page_url prev}}">
-    <nav class="buster_card buster_pagination">
+    <div class="card_wrapper card_index wrapper_pagination">
+    <a class="newer_posts" href="{{page_url prev}}">
+    <nav class="card pagination">
     {{!-- if previous --}}
     <i class="fa fa-chevron-left" aria-hidden="true"></i>
     </nav>
