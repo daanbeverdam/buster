@@ -28,7 +28,7 @@
                 {{#if tags}}
                 <span class="post_tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
                 {{/if}}
-                <span class="post_date"><i class="fa fa-calendar" aria-hidden="true"></i><time>{{date}}</time></span>
+                <span class="post_date"><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
             </div>
         </div>
         {{/is}}

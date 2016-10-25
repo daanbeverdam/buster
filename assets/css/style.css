@@ -141,11 +141,6 @@ hr {
 .top_navigation_wrapper .current_navigation_item {
     border-bottom: solid 4px #0090d2;
     color: #0090d2;
-    /*box-shadow: 0px 2.5px 10px 0px rgb(185, 185, 185);*/
-    /*-webkit-transform:scale(1.025);
-    -moz-transform:scale(1.025);
-    -o-transform:scale(1.025);
-    transform:scale(1.025);*/
 }
 
 .top_navigation_wrapper .navigation_item:hover {
@@ -157,8 +152,13 @@ hr {
     box-sizing: border-box;
     display: inline-block;
     height: 100%;
+    padding: 0 0;
+}
+
+.top_navigation_wrapper .navigation_item a {
+    display: block;
     padding: 0 1.3em;
-}​
+}
 
 .sidebar_wrapper {
     height: 100%;

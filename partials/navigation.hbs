@@ -1,5 +1,5 @@
 <ul class="navigation">
     {{#foreach navigation}}
-    <a href="{{url absolute="true"}}"><li class="navigation_item{{#if current}} current_navigation_item{{/if}}" id="{{slug}}">{{label}}</li></a>
+    <li class="navigation_item{{#if current}} current_navigation_item{{/if}} {{slug}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
     {{/foreach}}
 </ul>
