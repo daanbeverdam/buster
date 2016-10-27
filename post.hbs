@@ -1,42 +1,42 @@
 {{!< default}}
-<div class="articles_wrapper">
-<div class="post_view">
+<div class="articles-wrapper">
+<div class="post-view">
 {{#post}}
 {{#is "post"}}
-<div class="card_wrapper card_post_wrapper">
+<div class="card-wrapper card-post-wrapper">
 {{else}}
-<div class="card_wrapper card_page_wrapper">
+<div class="card-wrapper card-page-wrapper">
 {{/is}}
-<div class="card card_post">
+<div class="card card-post">
     <article class="article">
-        <div class="card_image">
+        <div class="card-image">
             {{#if image}}
                 <img src="{{image}}" alt="{{title}}"></img>
             {{else}}
                 <svg alt="{{title}}"/ >
             {{/if}}
-            <div class="card_image_filter"></div>
-            <div class="card_title">
-                <h1 class="post_title">{{title}}</h1>
+            <div class="card-image-filter"></div>
+            <div class="card-title">
+                <h1 class="post-title">{{title}}</h1>
             </div>
         </div>
-        <div class="card_content card_content_post">
+        <div class="card-content card-content-post">
             {{content}}
         {{^is "page"}}
-        <div class="post_footer_wrapper">
-            <div class="post_footer">
+        <div class="post-footer-wrapper">
+            <div class="post-footer">
                 {{#if tags}}
-                <span class="post_tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
+                <span class="post-tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
                 {{/if}}
-                <span class="post_date"><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
+                <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
             </div>
         </div>
         {{/is}}
-        {{!-- <div class="share_post">
+        {{!-- <div class="share-post">
             <h4 class="share">Share this post: &nbsp;</h4>
-            <a class="share icon-twitter" target="_blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hide_this">Twitter</span></a>
-            <a class="share icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hide_this">Facebook</span></a>
-            <a class="share icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hide_this">Google+</span></a>
+            <a class="share icon-twitter" target="-blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hide-this">Twitter</span></a>
+            <a class="share icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hide-this">Facebook</span></a>
+            <a class="share icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hide-this">Google+</span></a>
         </div> --}}
         </div>
     </article>
@@ -44,10 +44,10 @@
 </div>
 
 {{#is "post"}}
-<div class="wrapper_more_articles">
-    <div class="wrapper_more">
-        <div class="card card_more">
-            <div class="read_more">
+<div class="wrapper-more-articles">
+    <div class="wrapper-more">
+        <div class="card card-more">
+            <div class="read-more">
                 <h2><i class="fa fa-th-list" aria-hidden="true"></i> Read more</h2>
             </div>
         </div>
@@ -61,7 +61,7 @@
 </div>
 {{/is}}
 {{/post}}
-{{!--     <div class="card_wrapper scroll_message" onclick="scroll_to_top()">
+{{!--     <div class="card-wrapper scroll-message" onclick="scroll_to_top()">
 <div class="card">
 <span>SCROLL TO TOP!</span>
 </div>

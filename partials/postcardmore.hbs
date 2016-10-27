@@ -1,25 +1,25 @@
-<div class="card_wrapper wrapper_more">
-    <div class="card card_more scale">
+<div class="card-wrapper wrapper-more">
+    <div class="card card-more scale">
         <a href="{{{url}}}" rel="bookmark">
-        <div class="card_image">
+        <div class="card-image">
             {{#if image}}
                 <img src="{{image}}" alt="{{title}}"></img>
             {{else}}
                 <svg alt="{{title}}"/ >
             {{/if}}
-            <div class="card_image_filter"></div>
-            <div class="card_title">
-                <h3 class="post_title">{{title}}</h3>
+            <div class="card-image-filter"></div>
+            <div class="card-title">
+                <h3 class="post-title">{{title}}</h3>
             </div>
         </div>
-        <div class="card_content">
-            <div class="post_summary">
-                <p class="post_excerpt">{{{excerpt words="50"}}}</p>
+        <div class="card-content">
+            <div class="post-summary">
+                <p class="post-excerpt">{{{excerpt words="50"}}}</p>
             </div>
         </a>
             {{#if tags}}
-            <div class="post_footer_wrapper">
-                <div class="post_footer">
+            <div class="post-footer-wrapper">
+                <div class="post-footer">
                     <i class="fa fa-tag" aria-hidden="true"></i>{{tags separator=", "}}
                 </div>
             </div>

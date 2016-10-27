@@ -1,16 +1,16 @@
 <header class="header" id="header">
-    <div class="menu_button" onclick="toggle_navigation();">
+    <div class="menu-button" onclick="toggle_navigation();">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-    <div class="header_logo_container">
+    <div class="header-logo-container">
         {{#if @blog.logo}}
-        <a onclick="toggle_sidebar();"><img class="header_logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <a onclick="toggle_sidebar();"><img class="header-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
     {{else}}
-        <a onclick="toggle_sidebar();"><svg class="header_logo"/></a>
+        <a onclick="toggle_sidebar();"><svg class="header-logo"/></a>
     {{/if}}
     </div>
     {{#if @blog.navigation}}
-        <nav class="top_navigation_wrapper">
+        <nav class="top-navigation-wrapper">
             {{navigation}}
         </nav>
     {{/if}}

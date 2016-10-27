@@ -1,5 +1,5 @@
 <div class="sidebar card" id="sidebar">
-    <div class="sidebar_title">
+    <div class="sidebar-title">
         <a title="{{@blog.title}}" href='{{@blog.url}}'>
             {{#is 'index'}}
             <h1>
@@ -12,15 +12,15 @@
             {{/is}}
         </a>
     </div>
-    <div class="sidebar_logo">
+    <div class="sidebar-logo">
     {{#if @blog.logo}}
-        <a class="blog_logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
     {{else}}
-        <a class="blog_logo" href="{{@blog.url}}"><svg /></a>
+        <a class="blog-logo" href="{{@blog.url}}"><svg /></a>
     {{/if}}
     </div>
-    <div class="sidebar_text">
-    <p class="blog_description">
+    <div class="sidebar-text">
+    <p class="blog-description">
         <a title="{{@blog.title}}" href='{{@blog.url}}'>
             {{@blog.description}}
         </a>
