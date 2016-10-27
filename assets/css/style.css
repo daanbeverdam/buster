@@ -371,11 +371,15 @@ hr {
 .side_navigation .navigation_item {
     float: left;
     clear: both;
-    padding: 2.3em;
 }
 
 .side_navigation .current_navigation_item {
     font-weight: bold;
+}
+
+.side_navigation .navigation_item a {
+    padding: 1em;
+    display: block;
 }
 
 .mobile_navigation_wrapper {
@@ -735,10 +739,6 @@ hr {
     .wrapper_more {
         width: 100%;
     }
-
-    .card_post_wrapper{
-        /*width: 100%;*/
-    }
 }
 
 @media screen and (max-width: 610px) {
@@ -759,11 +759,23 @@ hr {
     }
 
     .articles_wrapper {
-        /*padding-top: 55px;*/
         padding: 0px;
     }
 
-    .main {
+    .post-template .main {
+        padding-bottom: 0px;
+    }
+
+    .wrapper_more {
+        padding: 0px 10px 10px 10px;
+    }
+
+    .post-template .articles_wrapper {
+        padding: 0px;
+    }
+
+    .home-template .main {
         padding-bottom: 10px;
     }
+
 }

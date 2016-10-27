@@ -5,11 +5,25 @@ function toggle_sidebar () {
     infocard = document.getElementById('sidebar');
     if (infocard.style.top == '150%' || infocard.style.top === '') {
         showing_sidebar = true;
-        Velocity(infocard, {'top': '50%'}, {display: 'block'});
+        Velocity(infocard, {
+            top: '50%'
+        }, {
+            duration: 500
+        }, {
+            begin: infocard.style.display = 'block'
+        });
         show_sunscreen(true, 0.25);
     } else {
         showing_sidebar = false;
-        Velocity(infocard, {'top': '150%'}, {display: 'none'});
+        Velocity(infocard, {
+            top: '150%'
+        }, {
+            duration: 500
+        }, {
+            complete: function () {
+                infocard.style.display = 'none';
+            }
+        });
     }
 }
 
