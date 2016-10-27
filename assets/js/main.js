@@ -8,9 +8,10 @@ function toggle_sidebar () {
         Velocity(infocard, {
             top: '50%'
         }, {
-            duration: 500
-        }, {
-            begin: infocard.style.display = 'block'
+            duration: 500,
+            begin: function () {
+                infocard.style.display = 'block';
+            }
         });
         show_sunscreen(true, 0.25);
     } else {
@@ -18,8 +19,7 @@ function toggle_sidebar () {
         Velocity(infocard, {
             top: '150%'
         }, {
-            duration: 500
-        }, {
+            duration: 500,
             complete: function () {
                 infocard.style.display = 'none';
             }
