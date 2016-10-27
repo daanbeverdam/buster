@@ -1,10 +1,10 @@
-var showing_sidebar = false;
+var showing_infocard = false;
 var showing_navigation = false;
 
-function toggle_sidebar () {
-    infocard = document.getElementById('sidebar');
+function toggle_infocard () {
+    infocard = document.getElementById('infocard');
     if (infocard.style.top == '150%' || infocard.style.top === '') {
-        showing_sidebar = true;
+        showing_infocard = true;
         Velocity(infocard, {
             top: '50%'
         }, {
@@ -15,7 +15,7 @@ function toggle_sidebar () {
         });
         show_sunscreen(true, 0.25);
     } else {
-        showing_sidebar = false;
+        showing_infocard = false;
         Velocity(infocard, {
             top: '150%'
         }, {
@@ -50,11 +50,11 @@ function show_sunscreen (bool, opacity) {
 }
 
 function clear_sunscreen () {
-    if (showing_sidebar && showing_navigation) {
-        toggle_sidebar();
+    if (showing_infocard && showing_navigation) {
+        toggle_infocard();
         toggle_navigation();
-    } else if (showing_sidebar) {
-        toggle_sidebar();
+    } else if (showing_infocard) {
+        toggle_infocard();
     } else if (showing_navigation){
         toggle_navigation();
     }

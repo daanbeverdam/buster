@@ -4,9 +4,9 @@
     </div>
     <div class="header-logo-container">
         {{#if @blog.logo}}
-        <a onclick="toggle_sidebar();"><img class="header-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <a onclick="toggle_infocard();"><img class="header-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
     {{else}}
-        <a onclick="toggle_sidebar();"><svg class="header-logo"/></a>
+        <a onclick="toggle_infocard();"><svg class="header-logo"/></a>
     {{/if}}
     </div>
     {{#if @blog.navigation}}
