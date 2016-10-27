@@ -14,16 +14,14 @@
     </div>
     <div class="infocard-logo">
     {{#if @blog.logo}}
-        <a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <div class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></div>
     {{else}}
-        <a class="blog-logo" href="{{@blog.url}}"><svg /></a>
+        <div class="blog-logo" href="{{@blog.url}}"><svg /></div>
     {{/if}}
     </div>
     <div class="infocard-text">
     <p class="blog-description">
-        <a title="{{@blog.title}}" href='{{@blog.url}}'>
             {{@blog.description}}
-        </a>
     </p>
     </div>
     {{> footer}}

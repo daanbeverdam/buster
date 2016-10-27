@@ -266,11 +266,16 @@ hr {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 15px;
+    height: 150px;
+    display: flex;
+    align-items: center;
 }
 
 .blog-description {
-    padding-top: 1em;
+    word-wrap: break-word;
     text-align: center;
+    max-width: 100%;
+    padding: 0;
 }
 
 .navigation-item.current {
