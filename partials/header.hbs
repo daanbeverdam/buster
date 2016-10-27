@@ -1,17 +1,17 @@
-<div class="buster_header" id="header">
-    <div class="buster_menu_button" onclick="toggle_navigation();">
+<header class="header" id="header">
+    <div class="menu-button" onclick="toggle_navigation();">
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-    <div class="buster_header_logo_container">
+    <div class="header-logo-container">
         {{#if @blog.logo}}
-        <a onclick="toggle_sidebar();"><img class="buster_header_logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+        <a onclick="toggle_infocard();"><img class="header-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
     {{else}}
-        <a onclick="toggle_sidebar();"><svg class="buster_header_logo"/></a>
+        <a onclick="toggle_infocard();"><svg class="header-logo"/></a>
     {{/if}}
     </div>
     {{#if @blog.navigation}}
-        <nav class="buster_top_navigation_wrapper">
+        <nav class="top-navigation-wrapper">
             {{navigation}}
         </nav>
     {{/if}}
-</div>
+</header>
