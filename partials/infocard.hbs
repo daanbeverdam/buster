@@ -1,0 +1,28 @@
+<div class="infocard card" id="infocard">
+    <div class="infocard-title">
+        <a title="{{@blog.title}}" href='{{@blog.url}}'>
+            {{#is 'index'}}
+            <h1>
+                {{{@blog.title}}}
+            </h1>
+            {{else}}
+            <h2>
+                {{{@blog.title}}}
+            </h2>
+            {{/is}}
+        </a>
+    </div>
+    <div class="infocard-logo">
+    {{#if @blog.logo}}
+        <div class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></div>
+    {{else}}
+        <div class="blog-logo" href="{{@blog.url}}"><svg /></div>
+    {{/if}}
+    </div>
+    <div class="infocard-text">
+    <p class="blog-description">
+            {{@blog.description}}
+    </p>
+    </div>
+    {{> footer}}
+</div>

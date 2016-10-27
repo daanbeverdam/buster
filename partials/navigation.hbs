@@ -1,5 +1,5 @@
-<ul class="buster_navigation">
+<ul class="navigation">
     {{#foreach navigation}}
-    <a href="{{url absolute="true"}}"><li class="buster_navigation_item{{#if current}} buster_current_navigation_item{{/if}}" id="{{slug}}">{{label}}</li></a>
+    <li class="navigation-item{{#if current}} current-navigation-item{{/if}} {{slug}}"><a href="{{url absolute="true"}}">{{label}}</a></li>
     {{/foreach}}
 </ul>
