@@ -1,0 +1,28 @@
+<article onclick="location.href='{{{url}}}';" class="card card-more scale">
+    <a href="{{{url}}}" rel="bookmark">
+        <div class="card-image">
+            {{#if image}}
+            <img src="{{image}}" alt="{{title}}"></img>
+            {{else}}
+            <svg alt="{{title}}"/ >
+            {{/if}}
+            <div class="card-image-filter"></div>
+            <div class="card-title">
+                <h1 class="post-title">{{title}}</h1>
+            </div>
+        </div>
+    </a>
+    <div class="card-content">
+        <div class="post-summary">
+            <p class="post-excerpt">{{{excerpt words="50"}}}</p>
+        </div>
+        {{#if tags}}
+        <div class="post-footer-wrapper">
+            <div class="post-footer">
+                <i class="fa fa-tag" aria-hidden="true"></i>{{tags separator=", "}}
+            </div>
+        </div>
+        {{/if}}
+        <time class="date" datetime="{{date format="YYYY-MM-DD"}}">
+    </div>
+</article>

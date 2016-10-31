@@ -1,70 +1,67 @@
 {{!< default}}
 <div class="articles-wrapper">
-<div class="post-view">
-{{#post}}
-{{#is "post"}}
-<div class="card-wrapper card-post-wrapper">
-{{else}}
-<div class="card-wrapper card-page-wrapper">
-{{/is}}
-<div class="card card-post">
-    <article class="article">
-        <div class="card-image">
-            {{#if image}}
-                <img src="{{image}}" alt="{{title}}"></img>
-            {{else}}
-                <svg alt="{{title}}"/ >
-            {{/if}}
-            <div class="card-image-filter"></div>
-            <div class="card-title">
-                <h1 class="post-title">{{title}}</h1>
+    <div class="post-view">
+        {{#post}}
+        {{#is "post"}}
+        <div class="card-wrapper card-post-wrapper">
+        {{else}}
+        <div class="card-wrapper card-page-wrapper">
+        {{/is}}
+            <div class="card card-post">
+                <article class="article {{post_class}}">
+                    <div class="card-image">
+                        {{#if image}}
+                            <img src="{{image}}" alt="{{title}}"></img>
+                        {{else}}
+                            <svg alt="{{title}}"/ >
+                        {{/if}}
+                        <div class="card-image-filter"></div>
+                        <div class="card-title">
+                            <h1 class="post-title">{{title}}</h1>
+                        </div>
+                    </div>
+                    <div class="card-content card-content-post">
+                        {{content}}
+                    {{^is "page"}}
+                    <div class="post-footer-wrapper">
+                        <div class="post-footer">
+                            {{#if tags}}
+                            <span class="post-tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
+                            {{/if}}
+                            <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
+                        </div>
+                    </div>
+                    {{/is}}
+                    </div>
+                </article>
             </div>
         </div>
-        <div class="card-content card-content-post">
-            {{content}}
-        {{^is "page"}}
-        <div class="post-footer-wrapper">
-            <div class="post-footer">
-                {{#if tags}}
-                <span class="post-tags"><i class="fa fa-tag" aria-hidden="true"></i><span>{{tags separator=", "}}</span></span>
-                {{/if}}
-                <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time></span>
+        {{#is "post"}}
+        <div class="wrapper-more-articles">
+            <div class="wrapper-more">
+                <div class="card card-more">
+                    <div class="read-more">
+                        <span><i class="fa fa-th-list" aria-hidden="true"></i> Read more</span>
+                    </div>
+                </div>
             </div>
+            {{#prev_post}}
+            <div class="card-wrapper wrapper-more {{post_class}}">
+                {{> postcard}}
+            </div>
+            {{/prev_post}}
+            {{#next_post}}
+            <div class="card-wrapper wrapper-more {{post_class}}">
+                {{> postcard}}
+            </div>
+            {{/next_post}}
         </div>
         {{/is}}
-        {{!-- <div class="share-post">
-            <h4 class="share">Share this post: &nbsp;</h4>
-            <a class="share icon-twitter" target="-blank" href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"><span class="hide-this">Twitter</span></a>
-            <a class="share icon-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u={{url absolute="true"}}"><span class="hide-this">Facebook</span></a>
-            <a class="share icon-gplus" target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}"><span class="hide-this">Google+</span></a>
+        {{/post}}
+        {{!--     <div class="card-wrapper scroll-message" onclick="scroll_to_top()">
+        <div class="card">
+        <span>SCROLL TO TOP!</span>
+        </div>
         </div> --}}
-        </div>
-    </article>
     </div>
-</div>
-
-{{#is "post"}}
-<div class="wrapper-more-articles">
-    <div class="wrapper-more">
-        <div class="card card-more">
-            <div class="read-more">
-                <h2><i class="fa fa-th-list" aria-hidden="true"></i> Read more</h2>
-            </div>
-        </div>
-    </div>
-    {{#prev_post}}
-    {{> postcardmore}}
-    {{/prev_post}}
-    {{#next_post}}
-    {{> postcardmore}}
-    {{/next_post}}
-</div>
-{{/is}}
-{{/post}}
-{{!--     <div class="card-wrapper scroll-message" onclick="scroll_to_top()">
-<div class="card">
-<span>SCROLL TO TOP!</span>
-</div>
-</div> --}}
-</div>
 </div>
