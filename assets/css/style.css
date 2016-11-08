@@ -405,11 +405,33 @@ hr {
     font-size: 32px;
 }
 
-.scroll-message {
-    display: none;
+.card-wrapper.scroll-button {
+    padding: 20px;
     position: fixed;
     bottom: 0;
     right: 0;
+}
+
+.card.scroll-button {
+    border-radius: 50px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.scroll-button i {
+    font-size: 30px;
+    padding-left: 10px;
+    font-size: 30px;
+    padding: 2px 5px 0 5px;
+}
+
+.scroll-button:hover {
+    color: #0090d2
+}
+
+.hide-me {
+    visibility: hidden;
 }
 
 /* Index view */

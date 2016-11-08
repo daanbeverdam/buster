@@ -60,3 +60,19 @@ function clear_sunscreen () {
     }
     show_sunscreen(false);
 }
+
+function scroll_to_top () {
+    Velocity(document.body, "scroll", {offset: "0", mobileHA: false});
+}
+
+function scroll_visibility () {
+    var scroll_button = document.getElementById("scrollbutton");
+    var y = window.scrollY;
+    if (y >= 300) {
+        scroll_button.className = "card-wrapper scroll-button";
+    } else {
+        scroll_button.className = "card-wrapper scroll-button hide-me";
+    }
+}
+
+window.addEventListener("scroll", scroll_visibility);
