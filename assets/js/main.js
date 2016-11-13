@@ -75,4 +75,8 @@ function scroll_visibility () {
     }
 }
 
-window.addEventListener("scroll", scroll_visibility);
+window.onload = function add_scroll_listener (){
+    if (document.getElementById("scrollbutton")) {
+        window.addEventListener("scroll", scroll_visibility);
+    }
+};
