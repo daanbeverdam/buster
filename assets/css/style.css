@@ -177,7 +177,7 @@ hr {
     display: none;
     width: 300px;
     height: 400px;
-    margin-top: -200px; /*should be half the height*/
+    margin-top: -172.5px; /*should be half the height -27.5*/
     margin-left: -150px; /*should be half the width*/
     z-index: 5;
     position: fixed;
