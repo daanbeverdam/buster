@@ -406,18 +406,15 @@ hr {
     font-size: 32px;
 }
 
-.card-wrapper.scroll-button {
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
 .card.scroll-button {
     border-radius: 50px;
     padding: 10px;
     width: 40px;
     height: 40px;
+    margin: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 
 .scroll-button i {
@@ -431,8 +428,12 @@ hr {
     color: #0090d2
 }
 
-.hide-me {
-    visibility: hidden;
+.shrink-me {
+    transform: scale(0);
+}
+
+.enlarge-me {
+    transform: scale(1);
 }
 
 /* Index view */

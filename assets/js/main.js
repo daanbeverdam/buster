@@ -69,9 +69,9 @@ function scroll_visibility () {
     var scroll_button = document.getElementById("scrollbutton");
     var y = window.scrollY;
     if (y >= 300) {
-        scroll_button.className = "card-wrapper scroll-button";
+        scroll_button.className = "card scroll-button enlarge-me";
     } else {
-        scroll_button.className = "card-wrapper scroll-button hide-me";
+        scroll_button.className = "card scroll-button shrink-me";
     }
 }
 
