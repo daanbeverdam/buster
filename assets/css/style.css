@@ -555,6 +555,7 @@ hr {
 }
 
 .post-footer {
+    min-height: 22px;
     position: relative;
 }
 
