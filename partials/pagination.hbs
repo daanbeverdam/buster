@@ -2,7 +2,7 @@
 {{^if prev}}
 {{!-- if next --}}
     <div class="card-wrapper card-index wrapper-pagination">
-    <a class="older-posts" href="{{page-url next}}">
+    <a class="older-posts" href="{{page_url next}}">
     <nav class="card pagination">
     <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </nav>
@@ -11,7 +11,7 @@
 {{else}}
 {{!-- if next and previous --}}
     <div class="card-wrapper card-index wrapper-pagination">
-    <a class="newer-posts" href="{{page-url prev}}">
+    <a class="newer-posts" href="{{page_url prev}}">
     <nav class="card pagination">
     {{!-- if previous --}}
     <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -19,7 +19,7 @@
     </a>
     </div>
     <div class="card-wrapper card-index wrapper-pagination">
-    <a class="older-posts" href="{{page-url next}}">
+    <a class="older-posts" href="{{page_url next}}">
     <nav class="card pagination">
     <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </nav>
@@ -30,7 +30,7 @@
 {{#if prev}}
 {{^if next}}
     <div class="card-wrapper card-index wrapper-pagination">
-    <a class="newer-posts" href="{{page-url prev}}">
+    <a class="newer-posts" href="{{page_url prev}}">
     <nav class="card pagination">
     {{!-- if previous --}}
     <i class="fa fa-chevron-left" aria-hidden="true"></i>
