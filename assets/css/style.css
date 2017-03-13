@@ -593,16 +593,20 @@ hr {
     position: relative;
 }
 
+.wrapper-pagination .inner-wrapper {
+    position: relative;
+    display: table;
+    top: 30%;
+    margin: auto;
+}
+
 .pagination {
+    margin: 0 5px;
     border-radius: 100px;
     font-size: 35px;
     position: relative;
-    left: 50%;
-    top: 50%;
     height: 100px;
     width: 100px;
-    margin-left: -50px;
-    margin-top: -50px;
     line-height: 100px;
     text-align: center;
 }
@@ -783,7 +787,11 @@ hr {
     }
 
      .wrapper-pagination {
-        height: 165px;
+        height: 200px;
+    }
+
+    .wrapper-pagination .inner-wrapper {
+        top: 25%;
     }
 
     .articles-wrapper {
