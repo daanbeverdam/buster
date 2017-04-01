@@ -111,14 +111,13 @@ hr {
 }
 
 .header-logo {
-    /*box-shadow: 0px 2.5px 10px 0px rgba(0,0,0,0.2);*/
-    /*border: 2px solid #FFF;*/
     -webkit-border-radius: 50px;
     border-radius: 50px;
     height: 100%;
     width: 100%;
     object-fit: cover;
     vertical-align: middle;
+    background: lightgray;
 }
 
 .top-navigation-wrapper {
@@ -130,7 +129,6 @@ hr {
 
 .top-navigation-wrapper .navigation {
     text-align: justify;
-    /*min-width: 500px;*/
     vertical-align: middle;
     height: 100%;
 }
@@ -233,29 +231,13 @@ hr {
     padding-top: 45px;
 }
 
-.infocard-logo img {
+.infocard-logo img, .infocard-logo svg {
     display: block;
     width: 100px;
     height: 100px;
     margin: auto;
     object-fit: cover;
     box-shadow: 0px 2.5px 10px 0px rgba(0,0,0,0.2);
-    /*border: 2px solid #FFF;*/
-    -webkit-border-radius: 50px;
-    border-radius: 50px;
-    background-color: lightgray;
-}
-
-.infocard-logo svg {
-    display: block;
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    bottom: -25px;
-    right: 12px;
-    margin: auto;
-    box-shadow: 0px 2.5px 10px 0px rgba(0,0,0,0.2);
-    /*border: 2px solid #FFF;*/
     -webkit-border-radius: 50px;
     border-radius: 50px;
     background-color: lightgray;
@@ -504,14 +486,12 @@ hr {
 }
 
 .card-image img {
-    /*background: #0090d2;*/
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 .card-image svg {
-    /*background: #0090d2;*/
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -550,7 +530,6 @@ hr {
     padding-top: 1em;
     max-height: 22px;
     overflow: hidden;
-    /*color: #0090d2;*/
     font-weight: 400;
 }
 
