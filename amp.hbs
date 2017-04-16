@@ -18,7 +18,7 @@
     {{amp_ghost_head}}
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,600,400" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600" rel="stylesheet" type="text/css">
     <style amp-custom>
         /* ==========================================================================
            Table of Contents
@@ -234,12 +234,13 @@
         }
 
         body {
+            font-weight: 300;
             max-height: 100%;
             height: 100%;
             color: #3a4145;
             background: #f4f8fb;
             letter-spacing: 0.01rem;
-            font-family: "Merriweather", serif;
+            font-family: "Roboto";
             font-size: 1.8rem;
             line-height: 1.75em;
             text-rendering: geometricPrecision;
@@ -795,7 +796,7 @@
     {{#post}}
     <header class="main-header">
         <nav class="blog-title">
-            <a href="{{@blog.url}}">{{@blog.title}}</a>
+            <a href="{{@blog.url}}">&larr; return to {{@blog.title}}</a>
         </nav>
     </header>
 
@@ -824,10 +825,10 @@
 
         </article>
     </main>
-    {{/post}}
     <footer class="site-footer clearfix">
+        <section>You are viewing the <a href="https://www.ampproject.org/">AMP</a> version of this article. Click <a href="{{url}}">here</a> for the full version.</section>
         <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
     </footer>
+    {{/post}}
 </body>
 </html>
