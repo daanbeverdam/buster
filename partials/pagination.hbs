@@ -1,37 +1,44 @@
-<div class="card-wrapper card-index wrapper-pagination">
-    <div class="inner-wrapper">
-    {{#if next}}
+{{#if next}}
     {{^if prev}}
-    {{!-- if next --}}
-        <a class="older-posts" href="{{page_url next}}">
-        <nav class="card pagination">
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </nav>
-        </a>
+        {{!-- if next --}}
+        <div class="card-wrapper card-index wrapper-pagination">
+            <div class="inner-wrapper">
+                <a class="older-posts" href="{{page_url next}}" title="Next page">
+                    <nav class="card pagination">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </nav>
+                </a>
+            </div>
+        </div>
     {{else}}
-    {{!-- if next and previous --}}
-        <a class="newer-posts" href="{{page_url prev}}">
-        <nav class="card pagination">
-        {{!-- if previous --}}
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        </nav>
-        </a>
-        <a class="older-posts" href="{{page_url next}}">
-        <nav class="card pagination">
-        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </nav>
-        </a>
+        {{!-- if next and previous --}}
+        <div class="card-wrapper card-index wrapper-pagination">
+            <div class="inner-wrapper">
+                <a class="newer-posts" href="{{page_url prev}}" title="Previous page">
+                    <nav class="card pagination">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </nav>
+                </a>
+                <a class="older-posts" href="{{page_url next}}" title="Next page">
+                    <nav class="card pagination">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </nav>
+                </a>
+            </div>
+        </div>
     {{/if}}
-    {{/if}}
-    {{#if prev}}
+{{/if}}
+{{#if prev}}
     {{^if next}}
-        <a class="newer-posts" href="{{page_url prev}}">
-        <nav class="card pagination">
         {{!-- if previous --}}
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        </nav>
-        </a>
+        <div class="card-wrapper card-index wrapper-pagination">
+            <div class="inner-wrapper">
+                <a class="newer-posts" href="{{page_url prev}}" title="Previous page">
+                    <nav class="card pagination">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </nav>
+                </a>
+            </div>
+        </div>
     {{/if}}
-    {{/if}}
-    </div>
-</div>
+{{/if}}
