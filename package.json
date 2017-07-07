@@ -1,9 +1,17 @@
 {
-  "name": "Buster",
+  "name": "buster",
   "version": "1.3.4",
-  "description": "A lightweight, cards UI theme for Ghost.",
+  "description": "A responsive, clean card theme for the Ghost blogging platform.",
   "author": {
     "name": "Daan Beverdam",
-    "website": "www.daanbeverdam.com"
+    "url": "www.daanbeverdam.com"
+  },
+  "config": {
+    "posts_per_page": 11
+  },
+  "homepage": "https://github.com/daanbeverdam/buster",
+  "screenshots": {
+    "desktop": "assets/images/buster-theme-for-ghost-desktop.png",
+    "mobile": "assets/images/buster-theme-for-ghost-mobile.png"
   }
 }
