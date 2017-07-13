@@ -698,12 +698,13 @@
             line-height: 1.2em;
         }
 
-        .post-image {
+        .post-feature_image {
             margin: 0;
             padding-top: 3rem;
             padding-bottom: 30px;
             border-top: 1px #E8E8E8 solid;
         }
+       
 
         /* Keep images centered, and allow images wider than the main
            text column to break out. */
@@ -812,11 +813,11 @@
                     <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time>
                 </section>
             </header>
-            {{#if image}}
-            <figure class="post-image">
-                <amp-img src="{{image absolute="true"}}" width="600" height="400" layout="responsive"></amp-img>
-            </figure>
-            {{/if}}
+             {{#if feature_image}} 
+            <figure class="post-feature_image"> 
+                <amp-img src={{img_url feature_image absolute="true"}} width="600" height="400" layout="responsive"></amp-img>            </figure>
+            </figure> 
+            {{/if}} 
             <section class="post-content">
 
                 {{amp_content}}
