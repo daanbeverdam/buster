@@ -25,7 +25,7 @@ a:hover {
     color: #0090d2
 }
 
-ul,li {
+nav ul, nav li {
     list-style-type: none;
     margin: inherit;
     padding: inherit;
@@ -635,6 +635,7 @@ hr {
 
 .card-post-wrapper {
     float: left;
+    width: 100%;
     max-width: 600px;
 }
 
