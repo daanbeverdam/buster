@@ -71,6 +71,8 @@ p code {
 }
 
 blockquote {
+    padding-left: 15px;
+    border-left: 3px solid #f1f1f1;
     font-style: italic;
 }
 
