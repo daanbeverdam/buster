@@ -4,7 +4,7 @@
   "description": "A responsive, clean card theme for the Ghost blogging platform.",
   "author": {
     "name": "Daan Beverdam",
-    "url": "www.daanbeverdam.com"
+    "url": "https://www.daanbeverdam.com"
   },
   "config": {
     "posts_per_page": 11
