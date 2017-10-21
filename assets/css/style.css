@@ -625,7 +625,7 @@ hr {
 /* Post view */
 
 .post-view {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     box-sizing: content-box;
 }
@@ -639,21 +639,17 @@ hr {
 .card-post-wrapper {
     float: left;
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .card-page-wrapper {
-    width: 600px;
+    width: 650px;
     margin: auto;
     float: none;
 }
 
 .card-content-post {
     line-height: 25px;
-    /*text-align: justify;*/
-    /*max-width: 30em;*/
-    /*padding: 0 1em;*/
-    /*padding-bottom: 1em;*/
 }
 
 .card-content-post a {
@@ -675,11 +671,11 @@ hr {
 
 .wrapper-more-articles {
     float: right;
-    width: 300px;
+    width: 350px;
 }
 
 .wrapper-more {
-    width: inherit;
+    width: 100%;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -699,6 +695,16 @@ hr {
     height: 40px;
     width: 250px;
 }
+
+.comments .card, .comments {
+    width: 100%;
+}
+
+.comments .card {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
 
 /* Media queries */
 
@@ -731,7 +737,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1010px) {
     .card-post-wrapper {
         float: none;
         margin: auto;
@@ -741,7 +747,7 @@ hr {
         float: none;
         margin: auto;
         width: 100%;
-        max-width: 600px;
+        max-width: 650px;
     }
 }
 
