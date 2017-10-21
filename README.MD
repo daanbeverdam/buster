@@ -25,6 +25,18 @@ Alternatively, you can clone the repository into the `content/themes/` folder by
 git clone https://github.com/daanbeverdam/buster.git
 ```
 
+### Disqus comments
+
+If you want to enable Disqus comments, follow the steps on the [Disqus website](https://disqus.com/admin/create/). The subdomain you create should be added to the `<head>` of the theme as a javascript variable as follows.
+
+```
+<script>
+    DISQUS_SUBDOMAIN = '<subdomain>';  // replace <subdomain> with your own Disqus subdomain
+</script>
+```
+
+The easiest way to do this is to just paste this in blog header via 'code injection' from the backend.
+
 ### Recommended settings
 
 The recommended number of post per page is 11. Keep in mind that the frontpage is highly graphical and large post images may increase page load time. For optimal performance, aim for a resolution of 600 by 200 pixels.
