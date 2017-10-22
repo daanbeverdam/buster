@@ -21,21 +21,19 @@ Buster is a lightweight, open source theme for the [Ghost blogging platform](htt
 If you want to use the theme for your own blog you can grab the latest [zip file](https://github.com/daanbeverdam/buster/archive/master.zip) from the `master` branch. Upload this file via the backend or extract it into the `content/themes/` folder of your Ghost installation. Then restart Ghost and select the theme from the backend under `Settings > General > Theme`.
 Alternatively, you can clone the repository into the `content/themes/` folder by using
 
-```
+```bash
 git clone https://github.com/daanbeverdam/buster.git
 ```
 
 ### Disqus comments
 
-If you want to enable Disqus comments, follow the steps on the [Disqus website](https://disqus.com/admin/create/). The subdomain you create should be added to the `<head>` of the theme as a javascript variable as follows.
+If you want to enable comments, create a [Disqus](https://disqus.com) website following [these steps](https://disqus.com/admin/create/). The subdomain of the created website should be added to the `<head>` of the theme as a javascript variable. The easiest way to accomplish this, is to just paste the following under the 'blog header' section via 'code injection' from the backend:
 
-```
+```html
 <script>
-    DISQUS_SUBDOMAIN = '<subdomain>';  // replace <subdomain> with your own Disqus subdomain
+    DISQUS_SUBDOMAIN = 'subdomain';  // replace with your own Disqus subdomain
 </script>
 ```
-
-The easiest way to do this is to just paste this in blog header via 'code injection' from the backend.
 
 ### Recommended settings
 
