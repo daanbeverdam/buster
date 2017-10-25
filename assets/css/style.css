@@ -631,6 +631,10 @@ hr {
     box-sizing: content-box;
 }
 
+.card-post .card-image {
+    height: 250px;
+}
+
 .card-post {
     width: 100%;
     margin: auto;
