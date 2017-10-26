@@ -1,0 +1,26 @@
+<div class="card divider">
+    <span><i class="fa fa-user" aria-hidden="true"></i> Author</span>
+</div>
+{{#author}}
+<div class="card author">
+    <div class="card-image">
+        {{#if profile_image}}
+            <img class="author-image" src="{{profile_image}}" alt="{{name}}"/>
+        {{else}}
+        {{/if}}
+        <div class="card-image-filter"></div>
+        <div class="card-title">
+            <h1 class="author-name">{{name}}</h1>
+        </div>
+    </div>
+    <div class="card-content">
+        <p>{{bio}}</p>
+        <div class="post-footer-wrapper">
+            {{#if location}}
+            <i class="fa fa-globe" aria-hidden="true"></i> {{location}}
+            {{/if}}
+        </div>
+    </div>
+
+</div>
+{{/author}}

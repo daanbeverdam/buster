@@ -2,11 +2,7 @@
 <div class="articles-wrapper">
     <div class="post-view">
         {{#post}}
-        {{#is "post"}}
-        <div class="card-wrapper card-post-wrapper">
-        {{else}}
-        <div class="card-wrapper card-page-wrapper">
-        {{/is}}
+        <div class="card-wrapper card-{{#is "post"}}post{{else}}page{{/is}}-wrapper">
             <div class="card card-post">
                 <article class="article {{post_class}}">
                     <div class="card-image">
@@ -37,26 +33,7 @@
             </div>
         </div>
         {{#is "post"}}
-        <div class="wrapper-more-articles">
-            <div class="wrapper-more">
-                <div class="card card-more">
-                    <div class="read-more">
-                        <span><i class="fa fa-th-list" aria-hidden="true"></i> Read more</span>
-                    </div>
-                </div>
-            </div>
-            {{#prev_post}}
-            <div class="card-wrapper wrapper-more {{post_class}}">
-                {{> postcard}}
-            </div>
-            {{/prev_post}}
-            {{#next_post}}
-            <div class="card-wrapper wrapper-more {{post_class}}">
-                {{> postcard}}
-            </div>
-            {{/next_post}}
-            {{> comments}}
-        </div>
+        {{> sidecards}}
         {{/is}}
         {{/post}}
         {{> scrollbutton}}

@@ -515,7 +515,7 @@ hr {
     bottom: 12px;
 }
 
-.card-title .post-title {
+.card-title h1 {
     color: white;
     font-weight: 400;
     font-size: 25px;
@@ -674,42 +674,24 @@ hr {
     margin: 0 0;
 }
 
-.wrapper-more-articles {
+.wrapper-side-cards {
+    box-sizing: border-box;
+    padding: 10px;
     float: right;
     width: 350px;
 }
 
-.wrapper-more {
+.wrapper-side-cards .card {
     width: 100%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px;
-    float: right;
+    margin-bottom: 15px;
 }
 
-.card-more {
-    float: left;
-    width: 100%;
-}
-
-.read-more {
+.wrapper-side-cards .divider {
     line-height: 40px;
     display: block;
-    padding: 0 15px;
-    height: 40px;
-    width: 250px;
-}
-
-.comments .card, .comments {
-    width: 100%;
-}
-
-.comments .card {
-    padding: 15px;
     box-sizing: border-box;
+    padding: 0 15px;
 }
-
 
 /* Media queries */
 
@@ -748,7 +730,7 @@ hr {
         margin: auto;
     }
 
-    .wrapper-more-articles {
+    .wrapper-side-cards {
         float: none;
         margin: auto;
         width: 100%;
