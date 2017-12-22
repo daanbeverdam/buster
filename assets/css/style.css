@@ -683,7 +683,7 @@ hr {
 
 .wrapper-side-cards .card {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .wrapper-side-cards .divider {
@@ -736,10 +736,13 @@ hr {
         width: 100%;
         max-width: 650px;
     }
+
+    .wrapper-side-cards .card {
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 810px) {
-
     .card-index {
         width: 50%;
     }
@@ -770,7 +773,7 @@ hr {
         padding-bottom: 0px;
     }
 
-     .wrapper-pagination {
+    .wrapper-pagination {
         height: 200px;
     }
 
@@ -784,10 +787,6 @@ hr {
 
     .post-template .main {
         padding-bottom: 0px;
-    }
-
-    .wrapper-more {
-        padding: 0px 10px 10px 10px;
     }
 
     .post-template .articles-wrapper {
