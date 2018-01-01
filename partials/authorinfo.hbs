@@ -1,0 +1,23 @@
+{{#author}}
+<a href="{{url}}">
+    <div class="author-info">
+        <div class="author-image-wrapper">
+            {{#if profile_image}}
+                <img class="author-image" src="{{profile_image}}" alt="{{name}}"/>
+            {{else}}
+            {{/if}}
+        </div>
+        <div class="author-bio">
+            <div class="author-name-wrapper">
+                <h1 class="author-name">About {{name}}</h1>
+            </div>
+            <p>{{bio}}</p>
+            <div class="author-location-wrapper">
+                {{#if location}}
+                <i class="fa fa-globe" aria-hidden="true"></i> {{location}}
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</a>
+{{/author}}

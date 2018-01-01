@@ -638,7 +638,7 @@ hr {
 .card-post {
     width: 100%;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .card-post-wrapper {
@@ -686,11 +686,20 @@ hr {
     margin-bottom: 20px;
 }
 
-.wrapper-side-cards .divider {
+.post-view .divider {
     line-height: 40px;
     display: block;
     box-sizing: border-box;
     padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.comments-wrapper {
+    width: 100;
+}
+
+.comments-wrapper .card {
+    width: 100%;
 }
 
 /* Media queries */
@@ -737,9 +746,10 @@ hr {
         max-width: 650px;
     }
 
-    .wrapper-side-cards .card {
+    .post-view .card {
         margin-bottom: 10px;
     }
+
 }
 
 @media screen and (max-width: 810px) {
